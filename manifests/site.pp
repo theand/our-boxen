@@ -59,20 +59,20 @@ node default {
   include nginx
 
   # fail if FDE is not enabled
-  if $::root_encrypted == 'no' {
-    fail('Please enable full disk encryption and try again')
-  }
+  #if $::root_encrypted == 'no' {
+    #fail('Please enable full disk encryption and try again')
+  #}
 
   # node versions
-  nodejs::version { 'v0.6': }
-  nodejs::version { 'v0.8': }
+  #nodejs::version { 'v0.6': }
+  #nodejs::version { 'v0.8': }
   nodejs::version { 'v0.10': }
 
   # default ruby versions
   ruby::version { '1.9.3': }
   ruby::version { '2.0.0': }
-  ruby::version { '2.1.0': }
-  ruby::version { '2.1.1': }
+  #ruby::version { '2.1.0': }
+  #ruby::version { '2.1.1': }
   ruby::version { '2.1.2': }
 
   # common, useful packages
@@ -96,16 +96,14 @@ node default {
   include imageoptim
   include tmux
   include gitx
-  include nvm
   include screen
   include zsh
   include ghostscript
   include pcre
   include libtool
-  include wkhtmltopdf
   include autojump
   include autoconf
-  include xctool
+  #include xctool
   include wget
   include moreutils
   include libpng
@@ -117,8 +115,6 @@ node default {
   include docker
   include php::5_4
   include java
-  include bash
-  include bash::completion
   include mysql
   include python
   include imagemagick
@@ -142,22 +138,19 @@ node default {
   include osx::no_network_dsstores
   include osx::global::key_repeat_delay
   include osx::global::key_repeat_rate
+
   include osx::dock::icon_size
-
-  #include osx::global::natural_mouse_scrolling
-  class { 'osx::global::natural_mouse_scrolling':
-    enabled => false
-  }
-
-  #include osx::dock::position
+  include osx::dock::pin_position
+  include osx::dock::magnification
   class { 'osx::dock::position':
     position => 'left'
   }
 
-  include osx::dock::pin_position
-  include osx::sound::interface_sound_effects
-  include osx::dock::magnification
+  #class { 'osx::global::natural_mouse_scrolling':
+    #enabled => false
+  #}
 
+  include osx::sound::interface_sound_effects
 
 
   # custom GUI Apps by theand
