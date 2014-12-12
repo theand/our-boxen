@@ -168,11 +168,11 @@ node default {
   include osxfuse
   include ntfs_3g
 
-  #include 'intellij'
   class { 'intellij':
     edition => 'ultimate',
-      version => '13.1.6'
+      version => '14.0.2'
   }
+  include phpstorm
 
   include sourcetree
   include flux
@@ -212,6 +212,7 @@ node default {
   include firefox::nightly
   include vagrant_manager
   include secondbar
+  include hipchat
 
 
 }

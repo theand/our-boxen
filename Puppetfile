@@ -106,6 +106,7 @@ github "macvim",  "1.0.0"
 github "osxfuse",  "1.3.0"
 github "ntfs_3g",  "1.0.0", :repo => "MoOx/puppet-ntfs_3g"
 github "intellij",  "1.5.1"
+github "phpstorm",  "1.0.6"
 github "sourcetree",  "1.0.0"
 github "flux",  "1.0.1"
 github "adobe_reader",  "1.2.0"
@@ -136,6 +137,7 @@ github "iterm2",  "1.2.2"
 github "firefox",  "1.2.3"
 github "vagrant_manager",  "0.0.1"
 github "secondbar",  "1.0.1"
+github "hipchat",  "1.1.3"
 
 
 
