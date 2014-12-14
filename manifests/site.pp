@@ -235,6 +235,7 @@ node default {
   class {'filezilla': }
 
   include mysql_workbench
-
+  include alfred
+  include haroopad
 
 }
