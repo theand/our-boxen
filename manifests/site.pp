@@ -131,7 +131,6 @@ node default {
     delay => 10
   }
 
-  include osx::finder::show_all_on_desktop
   include osx::finder::unhide_library
   include osx::finder::show_hidden_files
   include osx::finder::enable_quicklook_text_selection
@@ -178,9 +177,6 @@ node default {
   include induction
   include wunderlist
   include picasa
-  include macvim
-  include osxfuse
-  include ntfs_3g
 
   class { 'intellij':
     edition => 'ultimate',
@@ -190,11 +186,22 @@ node default {
     version => '8.0.2'
   }
 
-  include sourcetree
+  class { 'sourcetree':
+    version  => "2.0.3"
+  }
+
   include flux
-  include adobe_reader
+
+  class { 'adobe_reader':
+    version  => "11.0.10"
+  }
+
   include mplayerx
-  include openoffice
+
+  class { 'openoffice':
+    version  => "4.3.20"
+  }
+
   include ccleaner
   include sequel_pro
   include appcleaner
@@ -202,12 +209,20 @@ node default {
   include reggy
   include opera
   include fonts
-  include virtualbox
+
+  class { 'virtualbox':
+    version  => "4.3.20",
+    patch_level  => "96996"
+  }
+
   include dash
   include pgadmin3
   include github_for_mac
 
-  class { 'vagrant':  completion => true, }
+  class { 'vagrant':
+    version  => "1.7.1",
+    completion => true
+  }
 
   include better_touch_tools
   include chrome
@@ -216,7 +231,9 @@ node default {
   include sublime_text::v2
   include atom
 
-  include libreoffice
+  class { 'libreoffice':
+    version => '4.3.4'
+  }
   class { 'libreoffice::languagepack':
     locale => 'ko'
   }
@@ -226,13 +243,19 @@ node default {
   include dropbox
   include iterm2::stable
   include firefox::nightly
-  include vagrant_manager
-  include secondbar
+
+  class {'vagrant_manager': }
+
   include hipchat
   include karabiner
 
-  class {'asepsis': }
-  class {'filezilla': }
+  class {'asepsis':
+    appversion => "2.1.2"
+  }
+
+  class {'filezilla':
+    version => '3.9.0.6'
+  }
 
   include mysql_workbench
   include alfred
