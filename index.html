@@ -3,6 +3,9 @@
 <head>
   <link rel="stylesheet" href="https://boxen.github.com/stylesheets/base.css" type="text/css" media="screen" charset="utf-8">
   <link rel="stylesheet" href="https://boxen.github.com/stylesheets/font-face.css" type="text/css" media="screen" charset="utf-8">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css" type="text/css" media="screen" charset="utf-8">
+  <link rel="stylesheet" href="./override.css" type="text/css" media="screen" charset="utf-8">
+
   <link rel="shortcut icon" href="https://boxen.github.com/favicon.ico" type="image/x-icon" />
   <meta name="viewport" content="width=1100">
   <meta charset="UTF-8">
@@ -13,125 +16,154 @@
     <div class="container">
       <div id="top" class="clearfix">
         <h1><a href="/">Boxen</a></h1>
-        <p><span>Quit worrying about your tools.</span>
-        Automate the pain out of your development environment. Boxen installs your dependencies so you can focus on getting things done.</p>
-        <a href="https://github.com/boxen/our-boxen/archive/master.tar.gz" class="download">Download<br><span>* on GitHub *</span></a>
+        <p><span>맥에서의 개발환경 세팅 자동화</span>
+          Boxen은 귀찮고 힘들고 시간 걸리는 개발환경 세팅을 자동화합니다.</p>
       </div>
     </div>
 
     <div class="container clearfix">
-      <p class="sub-header">Features <span>>></span></p>
     </div>
 
-    <div class="container">
-      <div id="hero">
-        <ul>
-          <li class="helmet"><strong>Keep your head.</strong><p>Worried you might miss out on a crucial update? </p><p>Don’t! Each time you run your <code>boxen</code>, it automagically<span class="trade">&trade;</span> updates to the latest release.</p></li>
-          <li class="vest"><strong>Protect Yourself, <i>from yourself</i>.</strong><p>Manage the dependencies of all of your apps in one place.</p></li>
-          <li class="jetpacks"><strong>A future, <i>with jetpacks</i>.</strong><p>Need a few different databases and languages to run your apps?</p><p>We’ve got you covered. They're just a few lines of code away.</p></li>
-          <li class="flamethrower"><strong>Just Add Fire.</strong><p>Fully configurable, insta-dev environments for you and yours. You can even install Minecraft with it.</p></li>
-        </ul>
-      </div>
-    </div>
     <div class="container clearfix">
-      <p class="sub-header">More About Boxen <span>>></span></p>
+      <p class="sub-header">Boxen에 대해 <span>>></span></p>
     </div>
     <div id="bottom" class="clearfix">
       <div class="container">
-        <p>Boxen is <strong>your team's IT robot.</strong> It's a dangerously opinionated framework that automates every piece of your development environment. GitHub, Inc. wrote the first version of Boxen (imaginatively called &ldquo;The Setup&rdquo;) to help employees start shipping on day one. It's configuration management for <em>everyone</em>: Designers, HR mavens, legal eagles, and developers. We believe that <strong>development is production</strong>, so we value consistency, predictability, and reproducibility over artisanal, hand-tweaked development environments.</p>
+        <p>Boxen은 무엇인가?</p>
 
         <div class="clearfix">
           <div class="left">
-            <p>We ditched The Setup and wrote Boxen so it's easily usable by <em>any</em> company, not just GitHub. We've extracted most Boxen features into modules that can be mixed and matched to create your perfect environment, and custom behavior is always just a module away.</p>
+            <p>
+              github에서 만든 툴
+            </p>
 
-            <h3>What can it do?</h3>
-            <p>Boxen can clone your projects, install your toolchains, apply security policies, configure your favorite music player, set your screensaver, clone your dotfiles, and scream for help when things go haywire. The example repository at <a href="http://github.com/boxen/our-boxen">boxen/our-boxen</a> shows how to require Full Disk Encryption, install packages from Homebrew, ensure the presence of some default Ruby and node.js versions, run nginx, and resolve custom requests to a local <code>.dev</code> domain.</p>
+            <h3>하는 일?</h3>
+            <p>
+              Boxen can clone your projects, install your toolchains, apply security policies, configure your favorite music player, set your screensaver, clone your dotfiles, and scream for help when things go haywire. The example repository at <a href="http://github.com/boxen/our-boxen">boxen/our-boxen</a> shows how to require Full Disk Encryption, install packages from Homebrew, ensure the presence of some default Ruby and node.js versions, run nginx, and resolve custom requests to a local <code>.dev</code> domain.
+            </p>
 
             <p>We've written <a href="https://github.com/boxen">roughly a bajillion libraries</a> for Boxen, covering everything from configuring elasticsearch to disabling &ldquo;natural&rdquo; scrolling to installing Minecraft. If we don't have what you need, you can <a href="https://github.com/boxen/puppet-template">write your own</a>. You can customize and extend your team's Boxen environment as well: If you have to install something manually, it's a bug.</p>
 
-            <h3>How do I customize this thing?</h3>
+            <h3>실행하는 법</h3>
+            <p>
+
+            </p>
+
+
+            <h3>내 입맛에 맞게 바꾸기</h3>
             <p>Boxen's secret sauce is <a href="https://puppetlabs.com/">Puppet</a>. New to Puppet? Never fear! We've <a href="https://github.com/boxen/our-boxen/tree/master/docs">written docs</a> aimed at beginners and experts alike. Boxen also makes it easy for you to <a href="https://github.com/boxen/our-boxen/blob/master/docs/personal-configuration.md">customize your own box</a> in reproducible, shareable ways. Boxen is released under the <a href="http://opensource.org/licenses/MIT">MIT license</a>, so go crazy.</p>
+
+            <h3>설치하는 내용</h3>
+            <p>
+              Github our-boxen의 기본 모듈 + 이 페이지를 작성한 사람이 취향대로 추가로 설정한 모듈
+
+<pre>
+our-boxen
+
+
+https://github.com/boxen/puppet-dnsmasq
+https://github.com/boxen/puppet-foreman
+https://github.com/boxen/puppet-gcc
+https://github.com/boxen/puppet-git
+https://github.com/boxen/puppet-go
+https://github.com/boxen/puppet-homebrew
+https://github.com/boxen/puppet-hub
+https://github.com/puppetlabs/puppetlabs-inifile
+https://github.com/boxen/puppet-nginx
+https://github.com/boxen/puppet-nodejs
+https://github.com/boxen/puppet-openssl
+https://github.com/boxen/puppet-phantomjs
+https://github.com/boxen/puppet-pkgconfig
+https://github.com/boxen/puppet-repository
+https://github.com/boxen/puppet-ruby
+https://github.com/puppetlabs/puppetlabs-stdlib
+https://github.com/boxen/puppet-sudo
+https://github.com/boxen/puppet-xquartz
 
 
 # custom Dev Tools by theand
-github "csshx",  "1.0.0"
-github "imageoptim",  "0.0.2"
-github "tmux",  "1.0.2"
-github "gitx",  "1.2.0"
-github "screen",  "0.0.2"
-github "zsh",  "1.0.0"
-github "ghostscript",  "1.0.0"
-github "pcre",  "1.0.0"
-github "libtool",  "1.0.0"
-github "autojump",  "1.0.0"
-github "autoconf",  "1.0.0"
-#github "xctool",  "0.0.2"
-github "wget",  "1.0.1"
-github "moreutils",  "1.0.0"
-github "libpng",  "1.0.0"
-github "automake",  "1.0.0"
-github "cmake",  "1.0.1"
-github "zshgitprompt",  "1.0.2"
-github "mr",  "1.0.1"
-github "vim",  "1.0.5"
-github "ctags",  "1.0.0"
-github "docker",  "0.7.0"
-github "osx",  "2.8.0"
-github "php",  "1.2.6"
-github "java",  "1.7.1"
-github "mysql",  "1.99.18"
-github "python",  "2.0.0"
-github "imagemagick",  "1.3.0"
+https://github.com/boxen/puppet-csshx
+https://github.com/boxen/puppet-imageoptim
+https://github.com/boxen/puppet-tmux
+https://github.com/boxen/puppet-gitx
+https://github.com/boxen/puppet-screen
+https://github.com/boxen/puppet-zsh
+https://github.com/boxen/puppet-ghostscript
+https://github.com/boxen/puppet-pcre
+https://github.com/boxen/puppet-libtool
+https://github.com/boxen/puppet-autojump
+https://github.com/boxen/puppet-autoconf
+https://github.com/boxen/puppet-wget
+https://github.com/boxen/puppet-moreutils
+https://github.com/boxen/puppet-libpng
+https://github.com/boxen/puppet-automake
+https://github.com/boxen/puppet-cmake
+https://github.com/boxen/puppet-zshgitprompt
+https://github.com/boxen/puppet-mr
+https://github.com/boxen/puppet-vim
+https://github.com/boxen/puppet-ctags
+https://github.com/boxen/puppet-docker
+https://github.com/boxen/puppet-osx
+https://github.com/boxen/puppet-php
+https://github.com/boxen/puppet-java
+https://github.com/boxen/puppet-mysql
+https://github.com/boxen/puppet-python
+https://github.com/boxen/puppet-imagemagick
 
 
 # custom GUI Apps by theand
-github "magican",  "1.0.2"
-github "clipmenu",  "1.0.0"
-github "brow",  "1.0.0"
-github "postgresapp",  "1.0.0"
-github "xtrafinder",  "1.0.1"
-github "caffeine",  "1.0.0"
-github "googledrive",  "1.0.2"
-github "induction",  "1.0.0"
-github "wunderlist",  "1.0.0"
-github "picasa",  "1.0.0"
-github "macvim",  "1.0.0"
-github "osxfuse",  "1.3.0"
-github "ntfs_3g",  "1.0.0", :repo => "MoOx/puppet-ntfs_3g"
-github "intellij",  "1.5.1"
-github "phpstorm",  "1.0.6"
-github "sourcetree",  "1.0.0"
-github "flux",  "1.0.1"
-github "adobe_reader",  "1.2.0"
-github "mplayerx",  "1.0.2"
-github "openoffice",  "1.2.0"
-github "ccleaner",  "1.1.0"
-github "sequel_pro",  "1.0.1"
-github "appcleaner",  "1.0.0"
-github "dterm",  "1.0.2"
-github "reggy",  "1.0.1"
-github "opera",  "0.3.3"
-github "fonts",  "0.0.3"
-github "virtualbox",  "1.0.13"
-github "dash",  "1.0.0"
-github "pgadmin3",  "1.0.0"
-github "github_for_mac",  "1.0.3"
-github "vagrant",  "3.2.0"
-github "better_touch_tools",  "3.0.0"
-github "chrome",  "1.2.0"
-github "seil",  "1.0.2"
-github "sublime_text",  "1.1.0"
-github "atom",  "1.1.0"
-github "libreoffice",  "4.2.6"
-github "pow",  "2.3.0"
-github "evernote",  "2.0.7"
-github "dropbox",  "1.4.1"
-github "iterm2",  "1.2.2"
-github "firefox",  "1.2.3"
-github "vagrant_manager",  "0.0.1"
-github "secondbar",  "1.0.1"
-github "hipchat",  "1.1.3"
+https://github.com/boxen/puppet-magican
+https://github.com/boxen/puppet-clipmenu
+https://github.com/boxen/puppet-brow
+https://github.com/boxen/puppet-postgresapp
+https://github.com/boxen/puppet-xtrafinder
+https://github.com/boxen/puppet-caffeine
+https://github.com/boxen/puppet-googledrive
+https://github.com/boxen/puppet-induction
+https://github.com/boxen/puppet-wunderlist
+https://github.com/boxen/puppet-picasa
+https://github.com/boxen/puppet-macvim
+https://github.com/boxen/puppet-osxfuse
+https://github.com/MoOx/puppet-ntfs_3g
+https://github.com/boxen/puppet-intellij
+https://github.com/boxen/puppet-phpstorm
+https://github.com/boxen/puppet-sourcetree
+https://github.com/boxen/puppet-flux
+https://github.com/boxen/puppet-adobe_reader
+https://github.com/boxen/puppet-mplayerx
+https://github.com/boxen/puppet-openoffice
+https://github.com/boxen/puppet-ccleaner
+https://github.com/boxen/puppet-sequel_pro
+https://github.com/boxen/puppet-appcleaner
+https://github.com/boxen/puppet-dterm
+https://github.com/boxen/puppet-reggy
+https://github.com/boxen/puppet-opera
+https://github.com/boxen/puppet-fonts
+https://github.com/boxen/puppet-virtualbox
+https://github.com/boxen/puppet-dash
+https://github.com/boxen/puppet-pgadmin3
+https://github.com/boxen/puppet-github_for_mac
+https://github.com/boxen/puppet-vagrant
+https://github.com/boxen/puppet-better_touch_tools
+https://github.com/boxen/puppet-chrome
+https://github.com/boxen/puppet-seil
+https://github.com/boxen/puppet-sublime_text
+https://github.com/boxen/puppet-atom
+https://github.com/boxen/puppet-libreoffice
+https://github.com/boxen/puppet-pow
+https://github.com/boxen/puppet-evernote
+https://github.com/boxen/puppet-dropbox
+https://github.com/boxen/puppet-iterm2
+https://github.com/boxen/puppet-firefox
+https://github.com/boxen/puppet-vagrant_manager
+https://github.com/boxen/puppet-secondbar
+https://github.com/boxen/puppet-hipchat
 
+
+
+</pre>
+
+            </p>
 
           </div>
           <div class="right">
@@ -141,10 +173,6 @@ github "hipchat",  "1.1.3"
           </div>
         </div> <!-- End of Right-Left Float Container Div -->
 
-        <div class="clearfix">
-          <h3>What about Linux, or Windows?</h3>
-          <p>Boxen only works on Mac OS X (Mountain Lion or above), because that's what we hack on every day. Puppet is really good at supporting multiple platforms, though, so send us some pull requests!</p>
-        </div>
       </div> <!-- End of Container Div -->
     </div> <!-- End of Bottom Div -->
   </div> <!-- End of Wrapper Div -->
@@ -152,6 +180,7 @@ github "hipchat",  "1.1.3"
   <div id="footer">
     <div class="container">
       <p>Built &amp; tested with &lt;&#51; by <a href="https://github.com/">GitHub, Inc.</a><span class="invertocat"></span></p>
+      <p>and modified by Heesang Chae(theand)</p>
     </div>
   </div> <!-- End of Footer ID -->
 

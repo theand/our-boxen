@@ -1,0 +1,58 @@
+body {
+    font-family: 'Nanum Gothic Coding', serif, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Nanum Gothic Coding', serif;
+}
+
+p {
+    font-family: 'Nanum Gothic Coding', serif;
+}
+
+strong {
+    font-family: 'Nanum Gothic Coding', serif;
+}
+
+a {
+    font-family: 'Nanum Gothic Coding', serif;
+}
+
+a.download {
+    font-family: 'Nanum Gothic Coding', serif;
+}
+
+#top h1 a {
+    font-family: 'Nanum Gothic Coding', serif;
+}
+
+#top p span {
+    font-family: 'Nanum Gothic Coding', serif;
+}
+
+.sub-header {
+    font-family: 'Nanum Gothic Coding', serif;
+}
+
+
+#hero strong {
+    font-family: 'Nanum Gothic Coding', serif;
+}
+
+#bottom h3 {
+    font-family: 'Nanum Gothic Coding', serif;
+}
+
+
+
+
+/* Footer */
+#footer {
+    font-family: 'Nanum Gothic Coding', serif;
+}
+
+#footer p, #footer p a {
+    font-family: 'Nanum Gothic Coding', serif;
+}
+
+
