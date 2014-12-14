@@ -184,9 +184,11 @@ node default {
 
   class { 'intellij':
     edition => 'ultimate',
-      version => '14.0.2'
+    version => '14.0.2'
   }
-  include phpstorm
+  class { 'phpstorm':
+    version => '8.0.2'
+  }
 
   include sourcetree
   include flux
