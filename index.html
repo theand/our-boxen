@@ -15,62 +15,52 @@
             <h1><a href="/">Boxen</a></h1>
 
             <p>
-                귀찮고 시간 걸리는 개발환경 세팅을 자동화합니다.
+                귀찮고 시간 걸리는 개발환경 세팅을 자동화합시다.
             </p>
         </div>
     </div>
 
-    <div class="container clearfix">
-    </div>
-
-    <div class="container clearfix">
-        <p class="sub-header">Boxen에 대해 <span></span></p>
-    </div>
     <div id="bottom" class="clearfix">
         <div class="container">
-            <p>Boxen은 무엇인가?</p>
 
             <div class="clearfix">
+                <h3>Boxen은 무엇인가?</h3>
                 <p>
-                    github에서 만든 툴 TODO
+                    github에서 만든 Mac 셋업 자동화 툴.
                 </p>
 
                 <h3>하는 일?</h3>
 
                 <p>
-                    TODO
+                    Puppet 모듈을 이용해 각종 개발에 필요한 프로그램을 설치하고, 설정을 적용함.
                 </p>
 
                 <h3>실행하는 법</h3>
 
                 <div>
-                    TODO
-
-                    <div class="screenshot boxen-web" >
-                        <code>
-                            curl -s https://gist.githubusercontent.com/theand/2b86ae3fc64527cd804e/raw/c4b3335595c8f1e55abacd99d0819137a5face1e/install_boxen > /tmp/install-boxen; bash /tmp/install-boxen
-                        </code>
-                    </div>
-                    <br>
-
                     <ol>
-                        <li>한줄짜리 커맨드를 모두 복사하고,</li>
-                        <li>맥에서 터미널을 열어서 붙여넣고 실행.</li>
-                        <li>사용자 암호와 깃헙 계정 정보를 입력. (깃헙 계정 정보 입력후 시간이 꽤 걸림)</li>
-                        <li>환경설정에서 에너지절약 설정을 변경. 컴퓨터가 잠들지 않도록.</li>
+                        <li>우선 환경설정에서 에너지절약 설정을 변경. 컴퓨터가 잠들지 않도록.</li>
+                        <li>아래 한줄로 이루어진 커맨드를 모두 복사하고,(curl 부터 /tmp/install-boxen 까지 모두)
+                            <div class="screenshot boxen-web" >
+                                <code>
+                                    curl -s https://gist.githubusercontent.com/theand/2b86ae3fc64527cd804e/raw/c4b3335595c8f1e55abacd99d0819137a5face1e/install_boxen > /tmp/install-boxen; bash /tmp/install-boxen
+                                </code>
+                            </div>
+                        </li>
+                        <li>맥에서 터미널을 열어서 붙여넣고 실행하면 다음과 같은 화면이 나옴.
+                            <div class="screenshot terminal">
+                            </div>
+                        </li>
+                        <li>사용자 암호와 깃헙 계정 정보를 입력하면서 진행. (깃헙 계정 정보 입력후 시간이 꽤 걸림)</li>
+                        <li>모든 설치절차는 자동화되어 있습니다. 다만 관리자 권한 때문에 암호를 물어보는 정도.</li>
                     </ol>
-
-
-                    <div class="screenshot terminal">
-                        TODO
-                    </div>
 
                 </div>
 
 
-                <h3>설치하는 모듈</h3>
+                <h3>FYI: 설치하는 모듈(Puppetfile, site.pp)</h3>
 
-                <p>
+                <div>
 
                     # from original <a href="http://github.com/boxen/our-boxen">boxen/our-boxen</a>
                 <ul>
@@ -180,16 +170,7 @@
                 </ul>
 
 
-                </p>
-
-
-                <h3>내 입맛에 맞게 바꾸기</h3>
-
-                <p>
-
-                    TODO
-
-                </p>
+                </div>
 
 
                 <h3>참고자료</h3>
@@ -220,10 +201,10 @@
 
 <div id="footer">
     <div class="container">
-        <p>Built &amp; tested with &lt;&#51; by
+        <p>Originally built &amp; tested with &lt;&#51; by
             <a href="https://github.com/">GitHub, Inc.</a><span class="invertocat"></span></p>
 
-        <p>and this page is modified by Heesang Chae(theand)</p>
+        <p>and this boxen is modified and compiled by Heesang Chae(theand)</p>
     </div>
 </div>
 <!-- End of Footer ID -->
