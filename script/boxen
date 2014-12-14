@@ -35,27 +35,27 @@ unless ENV["BOXEN_NO_PULL"] ||
 
     clean  = `git status --porcelain`.empty?
     current_branch = `git symbolic-ref HEAD`.chomp
-    master = current_branch == "refs/heads/master"
+    theand = current_branch == "refs/heads/theand"
 
-    upstream_changes = `git rev-list --count master..origin/master`.chomp != '0'
-    fast_forwardable = `git rev-list --count origin/master..master`.chomp == '0'
+    upstream_changes = `git rev-list --count theand..origin/theand`.chomp != '0'
+    fast_forwardable = `git rev-list --count origin/theand..theand`.chomp == '0'
 
     if current_branch.empty?
       ref = `git log -1 --pretty=format:%h`
       warn "Boxen not currently on any branch (ref: #{ref}), won't auto-update!"
-    elsif !master
+    elsif !theand
       local_branch =  current_branch.split('/')[2..-1].join('/')
-      warn "Boxen on a non-master branch '#{local_branch}', won't auto-update!"
+      warn "Boxen on a non-theand branch '#{local_branch}', won't auto-update!"
     elsif !fast_forwardable
-      warn "Boxen's master branch is out of sync, won't auto-update!"
+      warn "Boxen's theand branch is out of sync, won't auto-update!"
     elsif !clean
       warn "Boxen has a dirty tree, won't auto-update!"
     elsif !upstream_changes
       warn "Boxen is up-to-date."
     end
 
-    if clean && master && fast_forwardable && upstream_changes
-      reset   = "(git reset --hard origin/master #{quietly})"
+    if clean && theand && fast_forwardable && upstream_changes
+      reset   = "(git reset --hard origin/theand #{quietly})"
       reclean = "(git clean -qdf)"
 
       unless system "#{reset} && #{reclean}"
