@@ -164,7 +164,7 @@ a.download span {
 #bottom .screenshot {
     clear: both;
     overflow: hidden;
-    width: 400px;
+    width: 90%;
     height: 240px;
     border-radius: 12px;
     background-repeat: no-repeat;
@@ -184,8 +184,11 @@ a.download span {
 
 #bottom .boxen-web {
     background-position: center center;
-    background-size: 510px auto;
+    background-size: 90% auto;
     background-color: #E9E9E9;
+    padding: 20px;
+    text-wrap: normal;
+    height: auto;
 }
 
 #bottom p {
