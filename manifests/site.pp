@@ -103,7 +103,6 @@ node default {
   include libtool
   include autojump
   include autoconf
-  #include xctool
   include wget
   include moreutils
   include libpng
@@ -127,28 +126,43 @@ node default {
   include osx::global::expand_save_dialog
   include osx::global::disable_autocorrect
   include osx::global::tap_to_click
+  include osx::global::key_repeat_rate
+  class { 'osx::global::key_repeat_delay':
+    delay => 10
+  }
+
   include osx::finder::show_all_on_desktop
   include osx::finder::unhide_library
   include osx::finder::show_hidden_files
   include osx::finder::enable_quicklook_text_selection
   include osx::finder::show_all_filename_extensions
+
   include osx::universal_access::ctrl_mod_zoom
   include osx::universal_access::enable_scrollwheel_zoom
+  include osx::safari::enable_developer_mode
+
   include osx::disable_app_quarantine
   include osx::no_network_dsstores
-  include osx::global::key_repeat_delay
-  include osx::global::key_repeat_rate
 
   include osx::dock::icon_size
   include osx::dock::pin_position
-  include osx::dock::magnification
+  include osx::dock::dim_hidden_apps
+
+  class { 'osx::dock::magnification':
+    magnification => true,
+    magnification_size => 84
+  }
+
   class { 'osx::dock::position':
     position => 'left'
   }
 
-  #class { 'osx::global::natural_mouse_scrolling':
-    #enabled => false
-  #}
+  class { 'osx::mouse::smart_zoom':
+   enabled => true
+  }
+  class { 'osx::mouse::swipe_between_pages':
+   enabled => true
+  }
 
   include osx::sound::interface_sound_effects
 
@@ -213,6 +227,11 @@ node default {
   include vagrant_manager
   include secondbar
   include hipchat
+  include karabiner
+
+  class {'asepsis': }
+  class {'filezilla': }
+
 
 
 }

@@ -72,7 +72,6 @@ github "pcre",  "1.0.0"
 github "libtool",  "1.0.0"
 github "autojump",  "1.0.0"
 github "autoconf",  "1.0.0"
-#github "xctool",  "0.0.2"
 github "wget",  "1.0.1"
 github "moreutils",  "1.0.0"
 github "libpng",  "1.0.0"
@@ -138,6 +137,8 @@ github "firefox",  "1.2.3"
 github "vagrant_manager",  "0.0.1"
 github "secondbar",  "1.0.1"
 github "hipchat",  "1.1.3"
-
+github "karabiner", "1.0.6"
+github "asepsis",  "0.1.0", :repo => "skoblenick/puppet-asepsis"
+github "filezilla",  "0.1.0", :repo => "skoblenick/puppet-filezilla"
 
 
