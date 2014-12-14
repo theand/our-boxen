@@ -232,6 +232,7 @@ node default {
   class {'asepsis': }
   class {'filezilla': }
 
+  include mysql_workbench
 
 
 }

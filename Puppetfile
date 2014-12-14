@@ -140,5 +140,5 @@ github "hipchat",  "1.1.3"
 github "karabiner", "1.0.6"
 github "asepsis",  "0.1.0", :repo => "skoblenick/puppet-asepsis"
 github "filezilla",  "0.1.0", :repo => "skoblenick/puppet-filezilla"
-
+github "mysql_workbench",  "0.0.2", :repo => "theand/puppet-mysql_workbench"
 
