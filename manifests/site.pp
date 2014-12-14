@@ -237,10 +237,7 @@ node default {
   include iterm2::stable
   include firefox::nightly
 
-  class {'vagrant_manager':
-    appversion => "2.1.2"
-  }
-
+  include vagrant_manager
   include hipchat
   include karabiner
 
