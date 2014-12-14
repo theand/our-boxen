@@ -230,9 +230,6 @@ node default {
   class { 'libreoffice':
     version => '4.3.4'
   }
-  class { 'libreoffice::languagepack':
-    locale => 'ko'
-  }
 
   include pow
   include evernote
@@ -240,13 +237,15 @@ node default {
   include iterm2::stable
   include firefox::nightly
 
-  class {'vagrant_manager': }
+  class {'vagrant_manager':
+    appversion => "2.1.2"
+  }
 
   include hipchat
   include karabiner
 
   class {'asepsis':
-    appversion => "2.1.2"
+    version => '1.5'
   }
 
   class {'filezilla':
