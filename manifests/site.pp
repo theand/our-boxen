@@ -245,7 +245,8 @@ node default {
   include haroopad
   include p4merge
   include brackets
-  include macvim
+  #include macvim  #needs XCode
+
 
   class { 'sourcetree':
     version  => "2.0.3"
