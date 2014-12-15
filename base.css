@@ -101,7 +101,6 @@ a:visited {
 
 #top p span {
     font-family: 'Nanum Gothic Coding';
-    text-transform: uppercase;
     font-size: 20px;
     display: block;
     margin-bottom: 3px;
@@ -156,7 +155,6 @@ a.download span {
     font-weight: normal;
     margin: 0 0 13px 0;
     line-height: 1.4;
-    text-transform: uppercase;
     color: #2A2A2F;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
 }
