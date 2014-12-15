@@ -58,6 +58,7 @@ node default {
   include hub
   include nginx
 
+
   # fail if FDE is not enabled
   #if $::root_encrypted == 'no' {
     #fail('Please enable full disk encryption and try again')
@@ -79,6 +80,11 @@ node default {
       'gnu-tar'
     ]:
   }
+
+  include foreman
+  include go
+  include openssl
+  include phantomjs
 
   file { "${boxen::config::srcdir}/our-boxen":
     ensure => link,
@@ -105,15 +111,18 @@ node default {
   include automake
   include cmake
   include zshgitprompt
+  include mr
   include ctags
-  include docker
   include php::5_4
   include java
+
   include mysql
+  mysql::db { 'mydb': }
+
   include python
   include imagemagick
+  include docker
 
-  mysql::db { 'mydb': }
 
   include osx::global::disable_key_press_and_hold
   include osx::global::enable_keyboard_control_access
@@ -152,10 +161,10 @@ node default {
   }
 
   class { 'osx::mouse::smart_zoom':
-   enabled => true
+    enabled => true
   }
   class { 'osx::mouse::swipe_between_pages':
-   enabled => true
+    enabled => true
   }
 
   include osx::sound::interface_sound_effects
@@ -165,7 +174,6 @@ node default {
   include magican
   include clipmenu
   include brow
-  include postgresapp
   include xtrafinder
   include caffeine
   include googledrive
@@ -181,23 +189,17 @@ node default {
     version => '8.0.2'
   }
 
-  class { 'sourcetree':
-    version  => "2.0.3"
-  }
-
   include flux
 
   class { 'openoffice':
     version  => "4.3.20"
   }
 
-  include ccleaner
+  include evernote
   include sequel_pro
-  include appcleaner
   include dterm
   include reggy
   include opera
-  include fonts
 
   class { 'virtualbox':
     version  => "4.3.20",
@@ -205,7 +207,6 @@ node default {
   }
 
   include dash
-  include pgadmin3
   include github_for_mac
 
   class { 'vagrant':
@@ -215,8 +216,6 @@ node default {
 
   include better_touch_tools
   include chrome
-  include seil
-
   include sublime_text::v2
   include atom
 
@@ -225,13 +224,18 @@ node default {
   }
 
   include pow
-  include evernote
   include dropbox
   include iterm2::stable
   include firefox::nightly
-
-  include vagrant_manager
   include hipchat
+  include alfred
+
+
+  include postgresapp
+  include ccleaner
+  include fonts
+  include seil
+  include vagrant_manager
   include karabiner
 
   class {'asepsis':
@@ -243,11 +247,19 @@ node default {
   }
 
   include mysql_workbench
-  include alfred
   include haroopad
   include p4merge
   include brackets
   include macvim
+
+  class { 'sourcetree':
+    version  => "2.0.3"
+  }
+
+  include appcleaner
+  include pgadmin3
+
   include spf13vim3
+
 
 }
