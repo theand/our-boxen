@@ -225,7 +225,11 @@ node default {
   include pow
   include dropbox
   include iterm2::stable
-  include firefox::nightly
+
+  class { 'firefox::nightly':
+    version => '37.0a1'
+  }
+
   include hipchat
   include alfred
 
