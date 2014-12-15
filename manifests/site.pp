@@ -237,10 +237,6 @@ node default {
   include vagrant_manager
   include karabiner
 
-  class {'asepsis':
-    version => '1.5'
-  }
-
   class {'filezilla':
     version => '3.9.0.6'
   }
