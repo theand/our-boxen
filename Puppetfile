@@ -80,13 +80,13 @@ github "cmake",  "1.0.1"
 github "zshgitprompt",  "1.0.2"
 github "mr",  "1.0.1"
 github "ctags",  "1.0.0"
-github "docker",  "0.7.0"
 github "osx",  "2.8.0"
 github "php",  "1.2.6"
 github "java",  "1.7.1"
 github "mysql",  "1.99.18"
 github "python",  "2.0.0"
 github "imagemagick",  "1.3.0"
+github "docker",  "0.7.1", :repo => "theand/puppet-docker"
 
 
 # custom GUI Apps by theand
