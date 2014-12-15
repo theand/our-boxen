@@ -105,7 +105,6 @@ node default {
   include automake
   include cmake
   include zshgitprompt
-  include vim
   include ctags
   include docker
   include php::5_4
@@ -188,12 +187,6 @@ node default {
 
   include flux
 
-  class { 'adobe_reader':
-    version  => "11.0.10"
-  }
-
-  include mplayerx
-
   class { 'openoffice':
     version  => "4.3.20"
   }
@@ -252,5 +245,9 @@ node default {
   include mysql_workbench
   include alfred
   include haroopad
+  include p4merge
+  include brackets
+  include macvim
+  include spf13vim3
 
 }
