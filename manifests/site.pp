@@ -195,7 +195,6 @@ node default {
     version  => "4.3.20"
   }
 
-  include evernote
   include sequel_pro
   include dterm
   include reggy
@@ -258,6 +257,7 @@ node default {
 
   include appcleaner
   include pgadmin3
+  include evernote
 
   include spf13vim3
 
