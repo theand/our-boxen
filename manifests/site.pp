@@ -192,7 +192,7 @@ node default {
   include flux
 
   class { 'openoffice':
-    version  => "4.3.20"
+    version  => "4.1.1"
   }
 
   include sequel_pro
