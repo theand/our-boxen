@@ -134,6 +134,7 @@ node default {
 
   include python
   include imagemagick
+  include spf13vim3
 
 
   # custom Default OS X Settings by theand
@@ -194,6 +195,7 @@ node default {
 
   include flux
 
+  #??
   class { 'openoffice':    version  => "4.1.1"  }
 
   include sequel_pro
@@ -253,7 +255,6 @@ node default {
   include pgadmin3
   include evernote
 
-  include spf13vim3
-
+  include mypeople
 
 }

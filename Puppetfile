@@ -79,6 +79,7 @@ github "mysql",  "1.99.18"
 github "python",  "2.0.0"
 github "imagemagick",  "1.3.0"
 github "docker",  "0.7.1", :repo => "theand/puppet-docker"
+github "spf13vim3",  "1.0.0", :repo => "samjsharpe/puppet-spf13vim3"
 
 
 # custom Default OS X Settings by theand
@@ -133,6 +134,6 @@ github "macvim",  "1.0.1", :repo => "theand/puppet-macvim"
 github "sourcetree",  "1.0.1", :repo => "theand/puppet-sourcetree"
 github "appcleaner",  "1.0.1", :repo => "theand/puppet-appcleaner"
 github "pgadmin3",  "1.0.1", :repo => "theand/puppet-pgadmin3"
-github "spf13vim3",  "1.0.0", :repo => "samjsharpe/puppet-spf13vim3"
 github "evernote",  "2.0.8", :repo => "theand/puppet-evernote"
+github "mypeople",  "0.0.1", :repo => "theand/puppet-mypeople"
 
