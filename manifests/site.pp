@@ -144,7 +144,7 @@ node default {
   include osx::global::expand_save_dialog
   include osx::global::disable_autocorrect
   include osx::global::tap_to_click
-  class { 'osx::global::key_repeat_rate':  rate => 2 }
+  include osx::global::key_repeat_rate
   class { 'osx::global::key_repeat_delay':    delay => 30  }
 
   include osx::finder::unhide_library
