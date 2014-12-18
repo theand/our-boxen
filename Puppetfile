@@ -39,10 +39,8 @@ github "module_data", "0.0.3", :repo => "ripienaar/puppet-module-data"
 # some/most of these if you want, but it's not recommended.
 
 github "dnsmasq",     "2.0.1"
-github "foreman",     "1.2.0"
 github "gcc",         "2.2.0"
 github "git",         "2.7.0"
-github "go",          "2.1.0"
 github "homebrew",    "1.11.1"
 github "hub",         "1.3.0"
 github "inifile",     "1.2.0", :repo => "puppetlabs/puppetlabs-inifile"
@@ -54,7 +52,6 @@ github "pkgconfig",   "1.0.0"
 github "repository",  "2.3.0"
 github "ruby",        "8.2.0"
 github "stdlib",      "4.4.0", :repo => "puppetlabs/puppetlabs-stdlib"
-github "sudo",        "1.0.0"
 github "xquartz",     "1.2.1"
 
 # Optional/custom modules. There are tons available at
@@ -62,12 +59,10 @@ github "xquartz",     "1.2.1"
 
 # custom Dev Tools by theand
 github "csshx",  "1.0.0"
-github "imageoptim",  "0.0.2"
 github "tmux",  "1.0.2"
 github "gitx",  "1.2.0"
 github "screen",  "1.0.0"
 github "zsh",  "1.0.0"
-github "ghostscript",  "1.0.0"
 github "pcre",  "1.0.0"
 github "libtool",  "1.0.0"
 github "autojump",  "1.0.0"
@@ -80,7 +75,6 @@ github "cmake",  "1.0.1"
 github "zshgitprompt",  "1.0.2"
 github "mr",  "1.0.1"
 github "ctags",  "1.0.0"
-github "osx",  "2.8.0"
 github "php",  "1.2.6"
 github "java",  "1.7.1"
 github "mysql",  "1.99.18"
@@ -89,7 +83,11 @@ github "imagemagick",  "1.3.0"
 github "docker",  "0.7.1", :repo => "theand/puppet-docker"
 
 
+# custom Default OS X Settings by theand
+github "osx",  "2.8.0"
+
 # custom GUI Apps by theand
+github "imageoptim",  "0.0.2"
 github "magican",  "1.0.2"
 github "clipmenu",  "1.0.0"
 github "brow",  "1.0.0"

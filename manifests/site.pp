@@ -66,11 +66,36 @@ node default {
 
   # node versions
   nodejs::version { 'v0.10': }
+  class { 'nodejs::global': version => 'v0.10' }
+  nodejs::module {
+    'bower':    node_version => 'v0.10'
+  }
+  nodejs::module {
+    'gulp':    node_version => 'v0.10'
+  }
+  nodejs::module {
+    'grunt-cli':    node_version => 'v0.10'
+  }
+  nodejs::module {
+    'yo':    node_version => 'v0.10'
+  }
+  nodejs::module {
+    'locally':    node_version => 'v0.10'
+  }
 
   # default ruby versions
   ruby::version { '1.9.3': }
   ruby::version { '2.0.0': }
   ruby::version { '2.1.2': }
+  class { 'ruby::global':
+    version => '2.0.0'
+  }
+  # ensure a gem is installed for all ruby versions
+  ruby_gem { 'bundler for all rubies':
+    gem          => 'bundler',
+    version      => '~> 1.0',
+    ruby_version => '*',
+  }
 
   # common, useful packages
   package {
@@ -81,10 +106,10 @@ node default {
     ]:
   }
 
-  include foreman
-  include go
   include openssl
-  include phantomjs
+
+  include phantomjs::1_9_0
+  phantomjs::global { '1.9.0': }
 
   file { "${boxen::config::srcdir}/our-boxen":
     ensure => link,
@@ -95,12 +120,10 @@ node default {
 
   # custom Dev Tools by theand
   include csshx
-  include imageoptim
   include tmux
   include gitx
   include screen
   include zsh
-  include ghostscript
   include pcre
   include libtool
   include autojump
@@ -121,9 +144,9 @@ node default {
 
   include python
   include imagemagick
-  include docker
 
 
+  # custom Default OS X Settings by theand
   include osx::global::disable_key_press_and_hold
   include osx::global::enable_keyboard_control_access
   include osx::global::expand_print_dialog
@@ -171,6 +194,7 @@ node default {
 
 
   # custom GUI Apps by theand
+  include imageoptim
   include magican
   include clipmenu
   include brow
