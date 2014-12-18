@@ -59,37 +59,20 @@ node default {
   include nginx
 
 
-  # fail if FDE is not enabled
-  #if $::root_encrypted == 'no' {
-    #fail('Please enable full disk encryption and try again')
-  #}
-
   # node versions
-  nodejs::version { 'v0.10': }
-  class { 'nodejs::global': version => 'v0.10' }
-  nodejs::module {
-    'bower':    node_version => 'v0.10'
-  }
-  nodejs::module {
-    'gulp':    node_version => 'v0.10'
-  }
-  nodejs::module {
-    'grunt-cli':    node_version => 'v0.10'
-  }
-  nodejs::module {
-    'yo':    node_version => 'v0.10'
-  }
-  nodejs::module {
-    'locally':    node_version => 'v0.10'
-  }
+  nodejs::version { 'v0.10.34': }
+  class { 'nodejs::global': version => 'v0.10.34' }
+  nodejs::module {    'bower':    node_version => 'v0.10.34'  }
+  nodejs::module {    'gulp':    node_version => 'v0.10.34'  }
+  nodejs::module {    'grunt-cli':    node_version => 'v0.10.34'  }
+  nodejs::module {    'yo':    node_version => 'v0.10.34'  }
+  nodejs::module {    'locally':    node_version => 'v0.10.34'  }
 
   # default ruby versions
   ruby::version { '1.9.3': }
   ruby::version { '2.0.0': }
   ruby::version { '2.1.2': }
-  class { 'ruby::global':
-    version => '2.0.0'
-  }
+  class { 'ruby::global':    version => '2.0.0'  }
   # ensure a gem is installed for all ruby versions
   ruby_gem { 'bundler for all rubies':
     gem          => 'bundler',
@@ -123,7 +106,10 @@ node default {
   include tmux
   include gitx
   include screen
-  include zsh
+
+  include bash
+  include bash::completion
+
   include pcre
   include libtool
   include autojump
@@ -133,7 +119,6 @@ node default {
   include libpng
   include automake
   include cmake
-  include zshgitprompt
   include mr
   include ctags
   include php::5_4
@@ -154,9 +139,7 @@ node default {
   include osx::global::disable_autocorrect
   include osx::global::tap_to_click
   include osx::global::key_repeat_rate
-  class { 'osx::global::key_repeat_delay':
-    delay => 10
-  }
+  class { 'osx::global::key_repeat_delay':    delay => 10  }
 
   include osx::finder::unhide_library
   include osx::finder::show_hidden_files
@@ -179,16 +162,9 @@ node default {
     magnification_size => 84
   }
 
-  class { 'osx::dock::position':
-    position => 'left'
-  }
-
-  class { 'osx::mouse::smart_zoom':
-    enabled => true
-  }
-  class { 'osx::mouse::swipe_between_pages':
-    enabled => true
-  }
+  class { 'osx::dock::position':    position => 'left'  }
+  class { 'osx::mouse::smart_zoom':    enabled => true  }
+  class { 'osx::mouse::swipe_between_pages':    enabled => true  }
 
   include osx::sound::interface_sound_effects
 
@@ -209,15 +185,11 @@ node default {
     edition => 'ultimate',
     version => '14.0.2'
   }
-  class { 'phpstorm':
-    version => '8.0.2'
-  }
+  class { 'phpstorm':    version => '8.0.2'  }
 
   include flux
 
-  class { 'openoffice':
-    version  => "4.1.1"
-  }
+  class { 'openoffice':    version  => "4.1.1"  }
 
   include sequel_pro
   include dterm
@@ -242,17 +214,13 @@ node default {
   include sublime_text::v2
   include atom
 
-  class { 'libreoffice':
-    version => '4.3.4'
-  }
+  class { 'libreoffice':    version => '4.3.4'  }
 
   include pow
   include dropbox
   include iterm2::stable
 
-  class { 'firefox::nightly':
-    version => '37.0a1'
-  }
+  class { 'firefox::nightly':    version => '37.0a1'  }
 
   include hipchat
   include alfred
@@ -265,9 +233,7 @@ node default {
   include vagrant_manager
   include karabiner
 
-  class {'filezilla':
-    version => '3.9.0.6'
-  }
+  class {'filezilla':    version => '3.9.0.6'  }
 
   include mysql_workbench
   include haroopad
@@ -276,9 +242,7 @@ node default {
   #include macvim  #needs XCode
 
 
-  class { 'sourcetree':
-    version  => "2.0.3"
-  }
+  class { 'sourcetree':    version  => "2.0.3"  }
 
   include appcleaner
   include pgadmin3
