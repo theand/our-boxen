@@ -120,7 +120,13 @@ node default {
   include cmake
   include mr
   include ctags
-  include php::5_4
+
+  include php::5_5_19
+  include php::5_6_3
+  include php::composer
+  class { 'php::global':  version => '5_4_35' }
+  include php::fpm::5_4_35
+
   include java
 
   include mysql
@@ -137,7 +143,7 @@ node default {
   include osx::global::expand_save_dialog
   include osx::global::disable_autocorrect
   include osx::global::tap_to_click
-  include osx::global::key_repeat_rate
+  class { 'osx::global::key_repeat_rate':  rate => 2 }
   class { 'osx::global::key_repeat_delay':    delay => 30  }
 
   include osx::finder::unhide_library
