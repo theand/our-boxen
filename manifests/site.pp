@@ -56,7 +56,6 @@ node default {
   include dnsmasq
   include git
   include hub
-  include nginx
 
 
   # node versions
@@ -139,7 +138,7 @@ node default {
   include osx::global::disable_autocorrect
   include osx::global::tap_to_click
   include osx::global::key_repeat_rate
-  class { 'osx::global::key_repeat_delay':    delay => 10  }
+  class { 'osx::global::key_repeat_delay':    delay => 30  }
 
   include osx::finder::unhide_library
   include osx::finder::show_hidden_files
