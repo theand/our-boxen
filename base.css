@@ -1,5 +1,6 @@
 html, body {
     height: 100%;
+    line-height:160%;
 }
 
 html {
@@ -44,12 +45,16 @@ strong {
 a {
     font-family: 'Nanum Gothic Coding';
     color: #2C2C2C;
-    text-decoration: none;
+    text-decoration: underline
     outline: none;
 }
 
 a:visited {
     text-decoration: none;
+}
+
+img {
+    margin: 10px 0;
 }
 
 #wrapper {

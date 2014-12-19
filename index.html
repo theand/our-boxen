@@ -12,7 +12,7 @@
 <div id="wrapper">
     <div class="container">
         <div id="top" class="clearfix">
-            <h1><a href="/">Boxen</a></h1>
+            <h1>Boxen</h1>
 
             <p>
                 귀찮고 시간 걸리는 개발환경 세팅을 자동화합시다.
@@ -32,27 +32,36 @@
                 <h3>하는 일?</h3>
 
                 <p>
-                    Puppet 모듈을 이용해 각종 개발에 필요한 프로그램을 설치하고, 설정을 적용함.
+                    Puppet 모듈을 이용해 각종 개발에 필요한 프로그램을 설치하고, 각 모듈별 설정을 일괄적용함.
                 </p>
 
-                <h3>실행하는 법</h3>
+                <h3>설치하는 법</h3>
 
                 <div>
                     <ol>
-                        <li>우선 환경설정에서 에너지절약 설정을 변경. 컴퓨터가 잠들지 않도록.</li>
-                        <li>아래 한줄로 이루어진 커맨드를 모두 복사하고,(curl 부터 /tmp/install-boxen 까지 모두)
+                        <li>설치도중 슬립모드로 들어가지 않도록 에너지절약 설정을 변경합니다.  <br>
+                            <img src="./img/no_sleep.jpg" /><br/>
+                        </li>
+                        <li>아래 한줄로 이루어진 커맨드를 모두 복사합니다(curl 부터 /tmp/install-boxen 까지 모두).
                             <div class="screenshot boxen-web" >
                                 <code>
                                     curl -s https://gist.githubusercontent.com/theand/2b86ae3fc64527cd804e/raw/c4b3335595c8f1e55abacd99d0819137a5face1e/install_boxen > /tmp/install-boxen; bash /tmp/install-boxen
                                 </code>
                             </div>
                         </li>
-                        <li>맥에서 터미널을 열어서 붙여넣고 실행하면 다음과 같은 화면이 나옴.
+                        <li>터미널을 열어서 붙여넣고 실행합니다.<br>
+                            <img src="./img/terminal.jpg" /><br/>
+                            <img src="./img/install_boxen.jpg" /><br/>
+                        </li>
+                        <li>실행하면 다음과 같은 화면이 나옵니다.
                             <div class="screenshot terminal">
                             </div>
                         </li>
-                        <li>사용자 암호와 깃헙 계정 정보를 입력하면서 진행. (깃헙 계정 정보 입력후 시간이 꽤 걸림)</li>
-                        <li>모든 설치절차는 자동화되어 있습니다. 다만 관리자 권한 때문에 암호를 물어보는 정도.</li>
+                        <li>맥 사용자 암호와 깃헙 계정 정보를 입력하고 기다리면 됩니다.</li>
+                        <li>모든 설치절차는 자동화되어 있습니다. 네트웍 상황에 따라 다르지만 2~3시간 정도 걸립니다.</li>
+                        <li>종료하면 아래 화면과 같이 쉘 프롬프트가 다시 뜹니다.<br>
+                            <img src="./img/install_finished.jpg" /><br/>
+                        </li>
                     </ol>
 
                 </div>
@@ -62,7 +71,7 @@
 
                 <div>
 
-                    # from original <a href="http://github.com/boxen/our-boxen">boxen/our-boxen</a>
+                # from original <a href="http://github.com/boxen/our-boxen">boxen/our-boxen</a>
                 <ul>
                     <li><a href="https://github.com/boxen/puppet-dnsmasq">dnsmasq</a></li>
                     <li><a href="https://github.com/boxen/puppet-gcc">gcc</a></li>
@@ -174,9 +183,8 @@
                 <div>
                 <ul>
                     <li><a href="https://github.com/boxen">https://github.com/boxen</a></li>
-                    <li><a href="https://puppetlabs.com/">Puppet</a></li>
                     <li><a href="https://github.com/boxen/our-boxen/tree/master/docs">https://github.com/boxen/our-boxen/tree/master/docs</a></li>
-                    <li><a href="https://github.com/boxen/our-boxen/blob/master/docs/personal-configuration.md">personal-configuration.md</a></li>
+                    <li><a href="https://puppetlabs.com/">https://puppetlabs.com/</a></li>
                 </ul>
                 Boxen is released under the <a href="http://opensource.org/licenses/MIT">MIT license</a>
                 </div>
