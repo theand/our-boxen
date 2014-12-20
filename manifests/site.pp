@@ -128,11 +128,10 @@ node default {
   include mr
   include ctags
 
-  include php::5_5_20
-  include php::5_6_4
+  include php::5_5_13
+  class { 'php::global':  version => '5_4_29' }
+  include php::fpm::5_4_29
   include php::composer
-  class { 'php::global':  version => '5_4_36' }
-  include php::fpm::5_4_36
 
   include java
 
