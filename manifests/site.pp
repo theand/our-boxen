@@ -86,7 +86,6 @@ node default {
       'ack',
       'findutils',
       'gnu-tar',
-      'coreutils',
       'dos2unix',
       'privoxy',
       'git-flow',
