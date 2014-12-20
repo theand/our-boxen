@@ -89,7 +89,6 @@ node default {
       'dos2unix',
       'privoxy',
       'git-flow',
-      'curl-ca-bundle',
       'the_silver_searcher',
       'tree'
     ]:
@@ -189,7 +188,6 @@ node default {
   include xtrafinder
   include caffeine
   include googledrive
-  include induction
   include wunderlist
   include picasa
 
@@ -200,9 +198,6 @@ node default {
   class { 'phpstorm':    version => '8.0.2'  }
 
   include flux
-
-  #??
-  class { 'openoffice':    version  => "4.1.1"  }
 
   include sequel_pro
   include dterm
@@ -227,8 +222,6 @@ node default {
   include sublime_text::v2
   include atom
 
-  class { 'libreoffice':    version => '4.3.4'  }
-
   include pow
   include dropbox
   include iterm2::stable
@@ -239,11 +232,9 @@ node default {
   include alfred
 
 
-  include postgresapp
   include ccleaner
   include fonts
   include seil
-  include vagrant_manager
   include karabiner
 
   class {'filezilla':    version => '3.9.0.6'  }
