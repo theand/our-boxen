@@ -85,7 +85,14 @@ node default {
       'ack',
       'findutils',
       'gnu-tar',
-      'coreutils'
+      'coreutils',
+      'dos2unix',
+      'privoxy',
+      'git-flow',
+      'curl-ca-bundle',
+      'the_silver_searcher',
+      'tree',
+      'wget'
     ]:
   }
 
@@ -122,11 +129,11 @@ node default {
   include mr
   include ctags
 
-  include php::5_5_19
-  include php::5_6_3
+  include php::5_5_20
+  include php::5_6_4
   include php::composer
-  class { 'php::global':  version => '5_4_35' }
-  include php::fpm::5_4_35
+  class { 'php::global':  version => '5_4_36' }
+  include php::fpm::5_4_36
 
   include java
 
