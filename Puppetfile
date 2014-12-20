@@ -51,6 +51,7 @@ github "pkgconfig",   "1.0.0"
 github "repository",  "2.3.0"
 github "ruby",        "8.2.0"
 github "stdlib",      "4.4.0", :repo => "puppetlabs/puppetlabs-stdlib"
+github "sudo",        "1.0.0"
 github "xquartz",     "1.2.1"
 
 # Optional/custom modules. There are tons available at
