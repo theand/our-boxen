@@ -91,8 +91,7 @@ node default {
       'git-flow',
       'curl-ca-bundle',
       'the_silver_searcher',
-      'tree',
-      'wget'
+      'tree'
     ]:
   }
 
