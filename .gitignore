@@ -10,5 +10,5 @@
 /shared/*
 !/shared/README.md
 /vendor/gems/
-/vendor/puppet/cache/
-Puppetfile.lock
+#/vendor/puppet/cache/
+#Puppetfile.lock
