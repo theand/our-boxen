@@ -69,9 +69,7 @@ node default {
   nodejs::module {    'locally':    node_version => 'v0.10.34'  }
 
   # default ruby versions
-  ruby::version { '1.9.3': }
   ruby::version { '2.0.0': }
-  ruby::version { '2.1.2': }
   class { 'ruby::global':    version => '2.0.0'  }
   # ensure a gem is installed for all ruby versions
   ruby_gem { 'bundler for all rubies':
@@ -127,7 +125,7 @@ node default {
   include mr
   include ctags
 
-  include php::5_5_13
+  include php::5_4_29
   class { 'php::global':  version => '5_4_29' }
   include php::fpm::5_4_29
   include php::composer
