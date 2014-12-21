@@ -80,7 +80,7 @@ github "java",  "1.7.1"
 github "mysql",  "1.99.19.1", :repo => "theand/puppet-mysql"
 github "python",  "2.0.0"
 github "imagemagick",  "1.3.0"
-github "spf13vim3",  "1.0.0", :repo => "samjsharpe/puppet-spf13vim3"
+github "spf13vim3",  "1.0.1", :repo => "theand/puppet-spf13vim3"
 
 
 # custom Default OS X Settings by theand
