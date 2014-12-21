@@ -339,11 +339,6 @@ GITHUBTARBALL
     module_data (0.0.3)
 
 GITHUBTARBALL
-  remote: samjsharpe/puppet-spf13vim3
-  specs:
-    spf13vim3 (1.0.0)
-
-GITHUBTARBALL
   remote: theand/puppet-appcleaner
   specs:
     appcleaner (1.0.1)
@@ -394,6 +389,11 @@ GITHUBTARBALL
     macvim (1.0.1)
 
 GITHUBTARBALL
+  remote: theand/puppet-mathiasdotfiles
+  specs:
+    mathiasdotfiles (0.0.2)
+
+GITHUBTARBALL
   remote: theand/puppet-mypeople
   specs:
     mypeople (0.0.1)
@@ -427,6 +427,11 @@ GITHUBTARBALL
   remote: theand/puppet-sourcetree
   specs:
     sourcetree (1.0.2)
+
+GITHUBTARBALL
+  remote: theand/puppet-spf13vim3
+  specs:
+    spf13vim3 (1.0.1)
 
 DEPENDENCIES
   alfred (= 1.4.0)
@@ -476,6 +481,7 @@ DEPENDENCIES
   libtool (= 1.0.0)
   macvim (= 1.0.1)
   magican (= 1.0.2)
+  mathiasdotfiles (= 0.0.2)
   module_data (= 0.0.3)
   moreutils (= 1.0.0)
   mr (= 1.0.1)
@@ -504,7 +510,7 @@ DEPENDENCIES
   seil (= 1.0.3)
   sequel_pro (= 1.0.1)
   sourcetree (= 1.0.2)
-  spf13vim3 (= 1.0.0)
+  spf13vim3 (= 1.0.1)
   stdlib (= 4.2.1)
   sublime_text (= 1.1.0)
   sudo (= 1.0.0)
