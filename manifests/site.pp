@@ -88,7 +88,12 @@ node default {
       'privoxy',
       'git-flow',
       'the_silver_searcher',
-      'tree'
+      'tree',
+      'w3m',
+      'maven',
+      'gradle',
+      'tomcat6',
+      'tomcat7'
     ]:
   }
 
