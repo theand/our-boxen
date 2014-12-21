@@ -131,7 +131,7 @@ node default {
   include ctags
 
   include php::5_4_29
-  class { 'php::global':  version => '5_4_29' }
+  class { 'php::global':  version => '5.4.29' }
   include php::fpm::5_4_29
   include php::composer
 
