@@ -220,7 +220,7 @@ node default {
     completion => true
   }
 
-  include better_touch_tools
+  #include better_touch_tools
   include chrome
   include sublime_text::v2
   include atom
@@ -237,8 +237,8 @@ node default {
 
   include ccleaner
   include fonts
-  include seil
-  include karabiner
+  #include seil
+  #include karabiner
 
   class {'filezilla':    version => '3.9.0.6'  }
 
