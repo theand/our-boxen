@@ -182,6 +182,7 @@ node default {
 
   include osx::sound::interface_sound_effects
 
+  include mathiasdotfiles
 
   # custom GUI Apps by theand
   include imageoptim

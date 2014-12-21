@@ -85,6 +85,7 @@ github "spf13vim3",  "1.0.1", :repo => "theand/puppet-spf13vim3"
 
 # custom Default OS X Settings by theand
 github "osx",  "2.8.0"
+github "mathiasdotfiles",  "0.0.1", :repo => "theand/puppet-mathiasdotfiles"
 
 # custom GUI Apps by theand
 github "imageoptim",  "0.0.2"
