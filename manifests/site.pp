@@ -106,8 +106,7 @@ node default {
       'pcre',
       'libpng',
       'libtool',
-      'moreutils',
-      'openssl'
+      'moreutils'
 
     ]:
   }
