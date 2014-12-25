@@ -78,7 +78,7 @@ node default {
     ruby_version => '*',
   }
 
-  # common, useful packages
+  # common, useful brew packages
   package {
     [
       'ack',
