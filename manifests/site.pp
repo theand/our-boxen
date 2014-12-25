@@ -101,7 +101,8 @@ node default {
       'ctags',
       'mr',
       'tmux',
-      'moreutils'
+      'moreutils',
+      'icdiff'
 
     ]:
   }
