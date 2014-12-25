@@ -106,7 +106,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-homebrew
   specs:
-    homebrew (1.9.8)
+    homebrew (1.11.2)
 
 GITHUBTARBALL
   remote: boxen/puppet-hub
@@ -404,7 +404,7 @@ DEPENDENCIES
   googledrive (= 1.0.2)
   haroopad (= 0.0.3)
   hipchat (= 1.1.3)
-  homebrew (= 1.9.8)
+  homebrew (= 1.11.2)
   hub (= 1.3.0)
   imagemagick (= 1.3.0)
   imageoptim (= 0.0.2)
