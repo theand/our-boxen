@@ -247,7 +247,7 @@ node default {
   include mysql_workbench
   include haroopad
   include p4merge
-  include brackets
+  class {'brackets':    version => '1.1'  }
   #include macvim  #needs XCode
 
 
