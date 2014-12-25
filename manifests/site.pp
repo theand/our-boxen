@@ -93,7 +93,8 @@ node default {
       'maven',
       'gradle',
       'tomcat6',
-      'tomcat7'
+      'tomcat7',
+      'screen'
     ]:
   }
 
@@ -113,7 +114,6 @@ node default {
   include csshx
   include tmux
   include gitx
-  include screen
 
   include bash
   include bash::completion
