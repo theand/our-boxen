@@ -95,17 +95,12 @@ node default {
       'tomcat6',
       'tomcat7',
       'screen',
-      'autoconf',
       'autojump',
-      'wget',
       'automake',
       'cmake',
       'ctags',
       'mr',
       'tmux',
-      'pcre',
-      'libpng',
-      'libtool',
       'moreutils'
 
     ]:

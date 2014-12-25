@@ -9,21 +9,6 @@ GITHUBTARBALL
     atom (1.1.0)
 
 GITHUBTARBALL
-  remote: boxen/puppet-autoconf
-  specs:
-    autoconf (1.0.0)
-
-GITHUBTARBALL
-  remote: boxen/puppet-autojump
-  specs:
-    autojump (1.0.0)
-
-GITHUBTARBALL
-  remote: boxen/puppet-automake
-  specs:
-    automake (1.0.0)
-
-GITHUBTARBALL
   remote: boxen/puppet-bash
   specs:
     bash (1.1.0)
@@ -54,19 +39,9 @@ GITHUBTARBALL
     clipmenu (1.0.0)
 
 GITHUBTARBALL
-  remote: boxen/puppet-cmake
-  specs:
-    cmake (1.0.1)
-
-GITHUBTARBALL
   remote: boxen/puppet-csshx
   specs:
     csshx (1.0.0)
-
-GITHUBTARBALL
-  remote: boxen/puppet-ctags
-  specs:
-    ctags (1.0.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-dash
@@ -164,29 +139,9 @@ GITHUBTARBALL
     java (1.7.1)
 
 GITHUBTARBALL
-  remote: boxen/puppet-libpng
-  specs:
-    libpng (1.0.0)
-
-GITHUBTARBALL
-  remote: boxen/puppet-libtool
-  specs:
-    libtool (1.0.0)
-
-GITHUBTARBALL
   remote: boxen/puppet-magican
   specs:
     magican (1.0.2)
-
-GITHUBTARBALL
-  remote: boxen/puppet-moreutils
-  specs:
-    moreutils (1.0.0)
-
-GITHUBTARBALL
-  remote: boxen/puppet-mr
-  specs:
-    mr (1.0.1)
 
 GITHUBTARBALL
   remote: boxen/puppet-nginx
@@ -214,19 +169,9 @@ GITHUBTARBALL
     osx (2.8.0)
 
 GITHUBTARBALL
-  remote: boxen/puppet-pcre
-  specs:
-    pcre (1.0.0)
-
-GITHUBTARBALL
   remote: boxen/puppet-phantomjs
   specs:
     phantomjs (2.3.0)
-
-GITHUBTARBALL
-  remote: boxen/puppet-php
-  specs:
-    php (1.2.6)
 
 GITHUBTARBALL
   remote: boxen/puppet-phpstorm
@@ -284,11 +229,6 @@ GITHUBTARBALL
     sudo (1.0.0)
 
 GITHUBTARBALL
-  remote: boxen/puppet-tmux
-  specs:
-    tmux (1.0.2)
-
-GITHUBTARBALL
   remote: boxen/puppet-vagrant
   specs:
     vagrant (3.2.0)
@@ -297,11 +237,6 @@ GITHUBTARBALL
   remote: boxen/puppet-virtualbox
   specs:
     virtualbox (1.0.13)
-
-GITHUBTARBALL
-  remote: boxen/puppet-wget
-  specs:
-    wget (1.0.1)
 
 GITHUBTARBALL
   remote: boxen/puppet-wunderlist
@@ -352,6 +287,11 @@ GITHUBTARBALL
   remote: theand/puppet-ccleaner
   specs:
     ccleaner (1.1.1)
+
+GITHUBTARBALL
+  remote: theand/puppet-daumcloud
+  specs:
+    daumcloud (0.0.1)
 
 GITHUBTARBALL
   remote: theand/puppet-evernote
@@ -414,6 +354,11 @@ GITHUBTARBALL
     pgadmin3 (1.0.1)
 
 GITHUBTARBALL
+  remote: theand/puppet-php
+  specs:
+    php (1.2.6.1)
+
+GITHUBTARBALL
   remote: theand/puppet-seil
   specs:
     seil (1.0.3)
@@ -432,9 +377,6 @@ DEPENDENCIES
   alfred (= 1.4.0)
   appcleaner (= 1.0.1)
   atom (= 1.1.0)
-  autoconf (= 1.0.0)
-  autojump (= 1.0.0)
-  automake (= 1.0.0)
   bash (= 1.1.0)
   better_touch_tools (= 3.0.0)
   boxen (= 3.7.1)
@@ -444,10 +386,9 @@ DEPENDENCIES
   ccleaner (= 1.1.1)
   chrome (= 1.2.0)
   clipmenu (= 1.0.0)
-  cmake (= 1.0.1)
   csshx (= 1.0.0)
-  ctags (= 1.0.0)
   dash (= 1.0.0)
+  daumcloud (= 0.0.1)
   dnsmasq (= 2.0.1)
   dropbox (= 1.4.1)
   dterm (= 0.1.2)
@@ -472,14 +413,10 @@ DEPENDENCIES
   iterm2 (= 1.2.2)
   java (= 1.7.1)
   karabiner (= 1.0.7)
-  libpng (= 1.0.0)
-  libtool (= 1.0.0)
   macvim (= 1.0.1)
   magican (= 1.0.2)
   mathiasdotfiles (= 0.0.2)
   module_data (= 0.0.3)
-  moreutils (= 1.0.0)
-  mr (= 1.0.1)
   mypeople (= 0.0.1)
   mysql (= 1.99.19.1)
   mysql_workbench (= 0.0.4)
@@ -489,10 +426,9 @@ DEPENDENCIES
   opera (= 0.3.3)
   osx (= 2.8.0)
   p4merge (= 0.0.5)
-  pcre (= 1.0.0)
   pgadmin3 (= 1.0.1)
   phantomjs (= 2.3.0)
-  php (= 1.2.6)
+  php (= 1.2.6.1)
   phpstorm (= 1.0.6)
   picasa (= 1.0.0)
   pkgconfig (= 1.0.0)
@@ -508,10 +444,8 @@ DEPENDENCIES
   stdlib (= 4.2.1)
   sublime_text (= 1.1.0)
   sudo (= 1.0.0)
-  tmux (= 1.0.2)
   vagrant (= 3.2.0)
   virtualbox (= 1.0.13)
-  wget (= 1.0.1)
   wunderlist (= 1.0.0)
   xquartz (= 1.2.1)
   xtrafinder (= 1.0.1)
