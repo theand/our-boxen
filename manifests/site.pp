@@ -112,6 +112,7 @@ node default {
     ]:
   }
 
+  include openssl
 
   include phantomjs::1_9_0
   phantomjs::global { '1.9.0': }
@@ -131,9 +132,11 @@ node default {
   include bash::completion
 
 
-  include php::5_4_29
-  class { 'php::global':  version => '5.4.29' }
-  include php::fpm::5_4_29
+  #include php::5_4_29
+  php::version { '5.4.36': }
+  class { 'php::global':  version => '5.4.36' }
+  #include php::fpm::5_4_29
+  php::fpm { '5.4.36': }
   include php::composer
 
   include java
