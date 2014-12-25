@@ -94,11 +94,24 @@ node default {
       'gradle',
       'tomcat6',
       'tomcat7',
-      'screen'
+      'screen',
+      'autoconf',
+      'autojump',
+      'wget',
+      'automake',
+      'cmake',
+      'ctags',
+      'mr',
+      'tmux',
+      'pcre',
+      'libpng',
+      'libtool',
+      'moreutils',
+      'openssl'
+
     ]:
   }
 
-  include openssl
 
   include phantomjs::1_9_0
   phantomjs::global { '1.9.0': }
@@ -112,23 +125,11 @@ node default {
 
   # custom Dev Tools by theand
   include csshx
-  include tmux
   include gitx
 
   include bash
   include bash::completion
 
-  include pcre
-  include libtool
-  include autojump
-  include autoconf
-  include wget
-  include moreutils
-  include libpng
-  include automake
-  include cmake
-  include mr
-  include ctags
 
   include php::5_4_29
   class { 'php::global':  version => '5.4.29' }
@@ -257,5 +258,6 @@ node default {
   include evernote
 
   include mypeople
+  include daumcloud
 
 }
