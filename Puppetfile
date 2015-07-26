@@ -29,7 +29,7 @@ end
 # Includes many of our custom types and providers, as well as global
 # config. Required.
 
-github "boxen", "3.11.0", :repo => "theand/puppet-boxen"
+github "boxen", "3.11.0", :repo => "theand-boxen/puppet-boxen"
 
 # Support for default hiera data in modules
 
@@ -72,14 +72,14 @@ github "java",  "1.7.1"
 github "python",  "2.0.0"
 github "imagemagick",  "1.3.0"
 github "vagrant",  "3.3.1"
-github "php",  "2.0.1.1", :repo => "theand/puppet-php"
-github "mysql",  "2.1.2", :repo => "theand/puppet-mysql"
-github "spf13vim3",  "1.0.1", :repo => "theand/puppet-spf13vim3"
+github "php",  "2.0.1.1", :repo => "theand-boxen/puppet-php"
+github "mysql",  "2.1.2", :repo => "theand-boxen/puppet-mysql"
+github "spf13vim3",  "1.0.1", :repo => "theand-boxen/puppet-spf13vim3"
 
 
 # custom Default OS X Settings by theand
 github "osx",  "2.8.0"
-github "mathiasdotfiles",  "0.0.2", :repo => "theand/puppet-mathiasdotfiles"
+github "mathiasdotfiles",  "0.0.2", :repo => "theand-boxen/puppet-mathiasdotfiles"
 
 # custom GUI Apps by theand
 github "imageoptim",  "0.0.2"
@@ -111,18 +111,18 @@ github "iterm2",  "1.2.5"
 github "firefox",  "1.2.3"
 github "hipchat",  "1.1.3"
 github "alfred",  "1.5.0"
-github "ccleaner",  "1.1.1", :repo => "theand/puppet-ccleaner"
-github "fonts",  "0.0.5", :repo => "theand/puppet-fonts"
-github "seil",  "1.0.4", :repo => "theand/puppet-seil"
-github "karabiner", "1.0.7.1", :repo => "theand/puppet-karabiner"
-github "filezilla",  "0.4.0", :repo => "theand/puppet-filezilla"
-github "mysql_workbench",  "0.0.5", :repo => "theand/puppet-mysql_workbench"
-github "haroopad",  "0.0.4", :repo => "theand/puppet-haroopad"
-github "p4merge",  "0.0.6", :repo => "theand/puppet-p4merge"
-github "brackets",  "0.1.4", :repo => "theand/puppet-brackets"
-github "macvim",  "1.0.1", :repo => "theand/puppet-macvim"
-github "sourcetree",  "1.0.3", :repo => "theand/puppet-sourcetree"
-github "appcleaner",  "1.0.2", :repo => "theand/puppet-appcleaner"
-github "pgadmin3",  "1.0.1", :repo => "theand/puppet-pgadmin3"
+github "ccleaner",  "1.1.1", :repo => "theand-boxen/puppet-ccleaner"
+github "fonts",  "0.0.5", :repo => "theand-boxen/puppet-fonts"
+github "seil",  "1.0.4", :repo => "theand-boxen/puppet-seil"
+github "karabiner", "1.0.7.1", :repo => "theand-boxen/puppet-karabiner"
+github "filezilla",  "0.4.0", :repo => "theand-boxen/puppet-filezilla"
+github "mysql_workbench",  "0.0.5", :repo => "theand-boxen/puppet-mysql_workbench"
+github "haroopad",  "0.0.4", :repo => "theand-boxen/puppet-haroopad"
+github "p4merge",  "0.0.6", :repo => "theand-boxen/puppet-p4merge"
+github "brackets",  "0.1.4", :repo => "theand-boxen/puppet-brackets"
+github "macvim",  "1.0.1", :repo => "theand-boxen/puppet-macvim"
+github "sourcetree",  "1.0.3", :repo => "theand-boxen/puppet-sourcetree"
+github "appcleaner",  "1.0.2", :repo => "theand-boxen/puppet-appcleaner"
+github "pgadmin3",  "1.0.1", :repo => "theand-boxen/puppet-pgadmin3"
 
 
