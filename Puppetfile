@@ -29,7 +29,7 @@ end
 # Includes many of our custom types and providers, as well as global
 # config. Required.
 
-github "boxen", "3.7.1", :repo => "theand/puppet-boxen"
+github "boxen", "3.11.0", :repo => "theand/puppet-boxen"
 
 # Support for default hiera data in modules
 
@@ -66,8 +66,8 @@ github "java",  "1.7.1"
 github "python",  "2.0.0"
 github "imagemagick",  "1.3.0"
 github "vagrant",  "3.2.0"
-github "php",  "1.2.6.1", :repo => "theand/puppet-php"
-github "mysql",  "1.99.19.1", :repo => "theand/puppet-mysql"
+github "php",  "2.0.1.1", :repo => "theand/puppet-php"
+github "mysql",  "2.1.2", :repo => "theand/puppet-mysql"
 github "spf13vim3",  "1.0.1", :repo => "theand/puppet-spf13vim3"
 
 
@@ -107,18 +107,15 @@ github "hipchat",  "1.1.3"
 github "alfred",  "1.4.0"
 github "ccleaner",  "1.1.1", :repo => "theand/puppet-ccleaner"
 github "fonts",  "0.0.5", :repo => "theand/puppet-fonts"
-github "seil",  "1.0.3", :repo => "theand/puppet-seil"
-github "karabiner", "1.0.7", :repo => "theand/puppet-karabiner"
-github "filezilla",  "0.3.0", :repo => "theand/puppet-filezilla"
-github "mysql_workbench",  "0.0.4", :repo => "theand/puppet-mysql_workbench"
-github "haroopad",  "0.0.3", :repo => "theand/puppet-haroopad"
-github "p4merge",  "0.0.5", :repo => "theand/puppet-p4merge"
-github "brackets",  "0.1.3", :repo => "theand/puppet-brackets"
+github "seil",  "1.0.4", :repo => "theand/puppet-seil"
+github "karabiner", "1.0.7.1", :repo => "theand/puppet-karabiner"
+github "filezilla",  "0.4.0", :repo => "theand/puppet-filezilla"
+github "mysql_workbench",  "0.0.5", :repo => "theand/puppet-mysql_workbench"
+github "haroopad",  "0.0.4", :repo => "theand/puppet-haroopad"
+github "p4merge",  "0.0.6", :repo => "theand/puppet-p4merge"
+github "brackets",  "0.1.4", :repo => "theand/puppet-brackets"
 github "macvim",  "1.0.1", :repo => "theand/puppet-macvim"
-github "sourcetree",  "1.0.2", :repo => "theand/puppet-sourcetree"
-github "appcleaner",  "1.0.1", :repo => "theand/puppet-appcleaner"
+github "sourcetree",  "1.0.3", :repo => "theand/puppet-sourcetree"
+github "appcleaner",  "1.0.2", :repo => "theand/puppet-appcleaner"
 github "pgadmin3",  "1.0.1", :repo => "theand/puppet-pgadmin3"
-github "evernote",  "2.0.8", :repo => "theand/puppet-evernote"
-github "mypeople",  "0.0.1", :repo => "theand/puppet-mypeople"
-github "daumcloud",  "0.0.1", :repo => "theand/puppet-daumcloud"
 

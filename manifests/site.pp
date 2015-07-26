@@ -69,8 +69,8 @@ node default {
   nodejs::module {    'locally':    node_version => 'v0.10.34'  }
 
   # default ruby versions
-  ruby::version { '2.0.0': }
-  class { 'ruby::global':    version => '2.0.0'  }
+  ruby::version { '2.2.0': }
+  class { 'ruby::global':    version => '2.2.0'  }
   # ensure a gem is installed for all ruby versions
   ruby_gem { 'bundler for all rubies':
     gem          => 'bundler',
@@ -127,10 +127,9 @@ node default {
   include bash::completion
 
 
-  include php::5_4_29
-  class { 'php::global':  version => '5.4.29' }
-  include php::fpm::5_4_29
+  class { 'php::global':  version => '5.6.9' }
   include php::composer
+  php::fpm { '5.6.9': }
 
   include java
 
@@ -238,7 +237,7 @@ node default {
   #include seil
   #include karabiner
 
-  class {'filezilla':    version => '3.9.0.6'  }
+  class {'filezilla':    version => '3.12.0.2'  }
 
   include mysql_workbench
   include haroopad
@@ -247,13 +246,10 @@ node default {
   #include macvim  #needs XCode
 
 
-  class { 'sourcetree':    version  => "2.0.3"  }
+  class { 'sourcetree':    version  => "2.0.5.2"  }
 
-  include appcleaner
+  class { 'appcleaner':    version  => "2.3"  }
   include pgadmin3
-  include evernote
 
-  include mypeople
-  include daumcloud
-
+  package { 'evernote': provider => 'brewcask' }
 }
