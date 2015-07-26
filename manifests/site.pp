@@ -1,6 +1,7 @@
 require boxen::environment
 require homebrew
 require gcc
+include brewcask
 
 Exec {
   group       => 'staff',
@@ -60,22 +61,26 @@ node default {
 
 
   # node versions
-  nodejs::version { 'v0.10.34': }
-  class { 'nodejs::global': version => 'v0.10.34' }
-  nodejs::module {    'bower':    node_version => 'v0.10.34'  }
-  nodejs::module {    'gulp':    node_version => 'v0.10.34'  }
-  nodejs::module {    'grunt-cli':    node_version => 'v0.10.34'  }
-  nodejs::module {    'yo':    node_version => 'v0.10.34'  }
-  nodejs::module {    'locally':    node_version => 'v0.10.34'  }
+  $node_version = '0.12'
+  class { 'nodejs::global': version => $node_version }
+  npm_module { "bower for ${version}":  module => 'bower', version => '~> 1.4.1', node_version => $version, }
+  npm_module { "gulp for ${version}":  module => 'gulp', version => '~> 3.9.0', node_version => $version, }
+  npm_module { "grunt-cli for ${version}":  module => 'grunt-cli', version => '~> 0.1.13', node_version => $version, }
+  npm_module { "yo for ${version}":  module => 'yo', version => '~> 1.4.7', node_version => $version, }
+  npm_module { "locally for ${version}":  module => 'locally', version => '~> 0.2.1', node_version => $version, }
 
   # default ruby versions
-  ruby::version { '2.2.0': }
-  class { 'ruby::global':    version => '2.2.0'  }
+  $ruby_version = "2.2.2"
+  class { 'ruby::global':    version => $ruby_version }
   # ensure a gem is installed for all ruby versions
   ruby_gem { 'bundler for all rubies':
     gem          => 'bundler',
-    version      => '~> 1.0',
-    ruby_version => '*',
+    version      => '~> 1.2.0',
+    ruby_version => "*",
+  }
+  ruby::rbenv::plugin { 'rbenv-vars':
+    ensure => 'v1.2.0',
+    source  => 'sstephenson/rbenv-vars'
   }
 
   # common, useful brew packages
@@ -109,7 +114,7 @@ node default {
 
   include openssl
 
-  include phantomjs::1_9_0
+  phantomjs::version { '1.9.0': }
   phantomjs::global { '1.9.0': }
 
   file { "${boxen::config::srcdir}/our-boxen":
@@ -191,31 +196,23 @@ node default {
   include wunderlist
   include picasa
 
-  class { 'intellij':
-    edition => 'ultimate',
-    version => '14.0.2'
-  }
-  class { 'phpstorm':    version => '8.0.2'  }
+  class { 'intellij':    edition => 'ultimate',    version => '14.1.4'  }
+  class { 'phpstorm':    version => '9.0'  }
+
+  class { 'eclipse::java': release => 'mars', version => 'R' }
 
   include flux
 
   include sequel_pro
   include dterm
   include reggy
-  include opera
 
-  class { 'virtualbox':
-    version  => "4.3.20",
-    patch_level  => "96996"
-  }
+  class { 'virtualbox':    version  => "5.0.0",    patch_level  => "101573"  }
 
   include dash
   include github_for_mac
 
-  class { 'vagrant':
-    version  => "1.7.1",
-    completion => true
-  }
+  class { 'vagrant':    version  => "1.7.4",    completion => true  }
 
   #include better_touch_tools
   include chrome
@@ -223,10 +220,13 @@ node default {
   include atom
 
   include pow
-  include dropbox
-  include iterm2::stable
 
-  class { 'firefox::nightly':    version => '37.0a1'  }
+  class { 'dropbox':    version => '3.8.4'  }
+
+  include iterm2::dev
+  include iterm2::colors::solarized_dark
+
+  class { 'firefox::nightly':    version => '42.0a1'  }
 
   include hipchat
   include alfred
