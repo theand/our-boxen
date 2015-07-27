@@ -234,8 +234,6 @@ node default {
   #include seil
   #include karabiner
 
-  class {'filezilla':    version => '3.12.0.2'  }
-
   include mysql_workbench
   include haroopad
   include p4merge
