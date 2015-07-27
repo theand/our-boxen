@@ -78,10 +78,7 @@ node default {
     version      => '~> 1.2.0',
     ruby_version => "*",
   }
-  ruby::rbenv::plugin { 'rbenv-vars':
-    ensure => 'v1.2.0',
-    source  => 'sstephenson/rbenv-vars'
-  }
+
 
   # common, useful brew packages
   package {
