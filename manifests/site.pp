@@ -61,7 +61,7 @@ node default {
 
 
   # node versions
-  $node_version = '0.12'
+  $node_version = '4.2.3'
   class { 'nodejs::global': version => $node_version }
   npm_module { "bower for ${version}":  module => 'bower', version => '~> 1.4.1', node_version => $version, }
   npm_module { "gulp for ${version}":  module => 'gulp', version => '~> 3.9.0', node_version => $version, }
@@ -75,7 +75,7 @@ node default {
   # ensure a gem is installed for all ruby versions
   ruby_gem { 'bundler for all rubies':
     gem          => 'bundler',
-    version      => '~> 1.2.0',
+    version      => '~> 1.10.5',
     ruby_version => "*",
   }
 
@@ -111,8 +111,8 @@ node default {
 
   include openssl
 
-  phantomjs::version { '1.9.0': }
-  phantomjs::global { '1.9.0': }
+  phantomjs::version { '2.0.0': }
+  phantomjs::global { '2.0.0': }
 
   file { "${boxen::config::srcdir}/our-boxen":
     ensure => link,
@@ -129,9 +129,9 @@ node default {
   include bash::completion
 
 
-  class { 'php::global':  version => '5.6.9' }
+  class { 'php::global':  version => '5.6.16' }
   include php::composer
-  php::fpm { '5.6.9': }
+  php::fpm { '5.6.16': }
 
   include java
 
@@ -184,46 +184,39 @@ node default {
 
   # custom GUI Apps by theand
   include imageoptim
-  include magican
-  include clipmenu
-  include brow
   include xtrafinder
   include caffeine
   include googledrive
   include wunderlist
   include picasa
 
-  class { 'intellij':    edition => 'ultimate',    version => '14.1.4'  }
-  class { 'phpstorm':    version => '9.0'  }
+  class { 'intellij':    edition => 'ultimate',    version => '14.1.5-custom-jdk-bundled'  }
+  class { 'phpstorm':    version => '10.0.1-custom-jdk-bundled'  }
 
-  class { 'eclipse::java': release => 'mars', version => 'R' }
+  class { 'eclipse::java': release => 'mars', version => 'R1a' }
 
   include flux
 
   include sequel_pro
-  include dterm
-  include reggy
 
-  class { 'virtualbox':    version  => "5.0.0",    patch_level  => "101573"  }
+  class { 'virtualbox':    version  => "5.0.10",    patch_level  => "104061"  }
 
-  include dash
   include github_for_mac
 
   class { 'vagrant':    version  => "1.7.4",    completion => true  }
 
-  #include better_touch_tools
   include chrome
-  include sublime_text::v2
+  include sublime_text
   include atom
 
   include pow
 
-  class { 'dropbox':    version => '3.8.4'  }
+  class { 'dropbox':    version => '3.12.4'  }
 
   include iterm2::dev
   include iterm2::colors::solarized_dark
 
-  class { 'firefox::nightly':    version => '42.0a1'  }
+  class { 'firefox::nightly':  }
 
   include hipchat
   include alfred
@@ -231,15 +224,12 @@ node default {
 
   include ccleaner
   include fonts
-  #include seil
-  #include karabiner
 
   include mysql_workbench
   include haroopad
   include p4merge
-  class {'brackets':    version => '1.1'  }
+  class {'brackets':    version => '1.5'  }
   #include macvim  #needs XCode
-
 
   class { 'sourcetree':    version  => "2.0.5.2"  }
 
