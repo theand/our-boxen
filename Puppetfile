@@ -29,7 +29,7 @@ end
 # Includes many of our custom types and providers, as well as global
 # config. Required.
 
-github "boxen", "3.11.1"
+github "boxen", "3.11.1.theand", :repo => "theand-boxen/puppet-boxen"
 
 # Support for default hiera data in modules
 
@@ -123,5 +123,3 @@ github "macvim",  "1.0.1", :repo => "theand-boxen/puppet-macvim"
 github "sourcetree",  "1.0.3", :repo => "theand-boxen/puppet-sourcetree"
 github "appcleaner",  "1.0.2", :repo => "theand-boxen/puppet-appcleaner"
 github "pgadmin3",  "1.0.1", :repo => "theand-boxen/puppet-pgadmin3"
-
-
