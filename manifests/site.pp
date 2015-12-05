@@ -70,7 +70,7 @@ node default {
   npm_module { "locally for ${version}":  module => 'locally', version => '~> 0.2.1', node_version => $version, }
 
   # default ruby versions
-  $ruby_version = "2.2.2"
+  $ruby_version = "2.2.3"
   class { 'ruby::global':    version => $ruby_version }
   # ensure a gem is installed for all ruby versions
   ruby_gem { 'bundler for all rubies':
