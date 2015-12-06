@@ -192,8 +192,6 @@ node default {
   class { 'intellij':    edition => 'ultimate',    version => '14.1.5-custom-jdk-bundled'  }
   class { 'phpstorm':    version => '10.0.1-custom-jdk-bundled'  }
 
-  class { 'eclipse::java': release => 'mars', version => 'R1a' }
-
   include flux
 
   include sequel_pro
