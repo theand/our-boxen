@@ -198,7 +198,7 @@ node default {
 
   class { 'virtualbox':    version  => "5.0.10",    patch_level  => "104061"  }
 
-  include github_for_mac
+  package { 'github': provider => 'brewcask' }
 
   class { 'vagrant':    version  => "1.7.4",    completion => true  }
 
