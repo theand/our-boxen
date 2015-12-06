@@ -123,7 +123,6 @@ node default {
 
   # custom Dev Tools by theand
   include csshx
-  include gitx
 
   include bash
   include bash::completion
