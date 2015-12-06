@@ -216,7 +216,7 @@ node default {
   class { 'firefox::nightly':  }
 
   include hipchat
-  include alfred
+  class { 'alfred':  version => '2.8.1_425' }
 
 
   include ccleaner
