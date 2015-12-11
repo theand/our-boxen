@@ -94,9 +94,7 @@ node default {
       'w3m',
       'maven',
       'gradle',
-      'tomcat6',
       'tomcat7',
-      'screen',
       'autojump',
       'automake',
       'cmake',
@@ -128,9 +126,9 @@ node default {
   include bash::completion
 
 
-  class { 'php::global':  version => '5.6.16' }
+  class { 'php::global':  version => '5.6.9' }
   include php::composer
-  php::fpm { '5.6.16': }
+  php::fpm { '5.6.9': }
 
   include java
 
@@ -198,7 +196,7 @@ node default {
 
   class { 'virtualbox':    version  => "5.0.10",    patch_level  => "104061"  }
 
-  package { 'github': provider => 'brewcask' }
+  package { 'github-desktop': provider => 'brewcask' }
 
   class { 'vagrant':    version  => "1.7.4",    completion => true  }
 
@@ -226,7 +224,6 @@ node default {
   include haroopad
   include p4merge
   class {'brackets':    version => '1.5'  }
-  #include macvim  #needs XCode
 
   class { 'sourcetree':    version  => "2.0.5.2"  }
 
