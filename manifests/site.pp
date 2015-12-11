@@ -1,6 +1,6 @@
 require boxen::environment
 require homebrew
-require gcc
+#require gcc
 include brewcask
 
 Exec {
@@ -109,8 +109,8 @@ node default {
 
   include openssl
 
-  phantomjs::version { '2.0.0': }
-  phantomjs::global { '2.0.0': }
+#  phantomjs::version { '2.0.0': }
+#  phantomjs::global { '2.0.0': }
 
   file { "${boxen::config::srcdir}/our-boxen":
     ensure => link,
@@ -120,115 +120,115 @@ node default {
 
 
   # custom Dev Tools by theand
-  include csshx
+#  include csshx
 
-  include bash
-  include bash::completion
+#  include bash
+#  include bash::completion
 
 
   class { 'php::global':  version => '5.6.9' }
   include php::composer
   php::fpm { '5.6.9': }
 
-  include java
+#  include java
 
   include mysql
   mysql::db { 'mydb': }
 
-  include python
-  include imagemagick
-  include spf13vim3
+#  include python
+#  include imagemagick
+#  include spf13vim3
 
 
   # custom Default OS X Settings by theand
-  include osx::global::disable_key_press_and_hold
-  include osx::global::enable_keyboard_control_access
-  include osx::global::expand_print_dialog
-  include osx::global::expand_save_dialog
-  include osx::global::disable_autocorrect
-  include osx::global::tap_to_click
-  include osx::global::key_repeat_rate
-  class { 'osx::global::key_repeat_delay':    delay => 30  }
+#  include osx::global::disable_key_press_and_hold
+#  include osx::global::enable_keyboard_control_access
+#  include osx::global::expand_print_dialog
+#  include osx::global::expand_save_dialog
+#  include osx::global::disable_autocorrect
+#  include osx::global::tap_to_click
+#  include osx::global::key_repeat_rate
+#  class { 'osx::global::key_repeat_delay':    delay => 30  }
 
-  include osx::finder::unhide_library
-  include osx::finder::show_hidden_files
-  include osx::finder::enable_quicklook_text_selection
-  include osx::finder::show_all_filename_extensions
+#  include osx::finder::unhide_library
+#  include osx::finder::show_hidden_files
+#  include osx::finder::enable_quicklook_text_selection
+#  include osx::finder::show_all_filename_extensions
 
-  include osx::universal_access::ctrl_mod_zoom
-  include osx::universal_access::enable_scrollwheel_zoom
-  include osx::safari::enable_developer_mode
+#  include osx::universal_access::ctrl_mod_zoom
+#  include osx::universal_access::enable_scrollwheel_zoom
+#  include osx::safari::enable_developer_mode
 
-  include osx::disable_app_quarantine
-  include osx::no_network_dsstores
+#  include osx::disable_app_quarantine
+#  include osx::no_network_dsstores
 
-  include osx::dock::icon_size
-  include osx::dock::pin_position
-  include osx::dock::dim_hidden_apps
+#  include osx::dock::icon_size
+#  include osx::dock::pin_position
+#  include osx::dock::dim_hidden_apps
 
-  class { 'osx::dock::magnification':
-    magnification => true,
-    magnification_size => 84
-  }
+#  class { 'osx::dock::magnification':
+#    magnification => true,
+#    magnification_size => 84
+#  }
 
-  class { 'osx::dock::position':    position => 'left'  }
-  class { 'osx::mouse::smart_zoom':    enabled => true  }
-  class { 'osx::mouse::swipe_between_pages':    enabled => true  }
+#  class { 'osx::dock::position':    position => 'left'  }
+#  class { 'osx::mouse::smart_zoom':    enabled => true  }
+#  class { 'osx::mouse::swipe_between_pages':    enabled => true  }
 
-  include osx::sound::interface_sound_effects
+#  include osx::sound::interface_sound_effects
 
-  include mathiasdotfiles
+#  include mathiasdotfiles
 
   # custom GUI Apps by theand
-  include imageoptim
-  include xtrafinder
-  include caffeine
-  include googledrive
-  include wunderlist
-  include picasa
+#  include imageoptim
+#  include xtrafinder
+#  include caffeine
+#  include googledrive
+#  include wunderlist
+#  include picasa
 
-  class { 'intellij':    edition => 'ultimate',    version => '14.1.5-custom-jdk-bundled'  }
-  class { 'phpstorm':    version => '10.0.1-custom-jdk-bundled'  }
+#  class { 'intellij':    edition => 'ultimate',    version => '14.1.5-custom-jdk-bundled'  }
+#  class { 'phpstorm':    version => '10.0.1-custom-jdk-bundled'  }
 
-  include flux
+#  include flux
 
-  include sequel_pro
+#  include sequel_pro
 
-  class { 'virtualbox':    version  => "5.0.10",    patch_level  => "104061"  }
+#  class { 'virtualbox':    version  => "5.0.10",    patch_level  => "104061"  }
 
-  package { 'github-desktop': provider => 'brewcask' }
+#  package { 'github-desktop': provider => 'brewcask' }
 
-  class { 'vagrant':    version  => "1.7.4",    completion => true  }
+#  class { 'vagrant':    version  => "1.7.4",    completion => true  }
 
-  include chrome
-  include sublime_text
-  include atom
+#  include chrome
+#  include sublime_text
+#  include atom
 
-  include pow
+#  include pow
 
-  class { 'dropbox':    version => '3.12.4'  }
+#  class { 'dropbox':    version => '3.12.4'  }
 
-  include iterm2::dev
-  include iterm2::colors::solarized_dark
+#  include iterm2::dev
+#  include iterm2::colors::solarized_dark
 
-  class { 'firefox::nightly':  }
+#  class { 'firefox::nightly':  }
 
-  include hipchat
-  class { 'alfred':  version => '2.8.1_425' }
+#  include hipchat
+#  class { 'alfred':  version => '2.8.1_425' }
 
 
-  include ccleaner
-  include fonts
+#  include ccleaner
+#  include fonts
 
-  include mysql_workbench
-  include haroopad
-  include p4merge
-  class {'brackets':    version => '1.5'  }
+#  include mysql_workbench
+#  include haroopad
+#  include p4merge
+#  class {'brackets':    version => '1.5'  }
 
-  class { 'sourcetree':    version  => "2.0.5.2"  }
+#  class { 'sourcetree':    version  => "2.0.5.2"  }
 
-  class { 'appcleaner':    version  => "2.3"  }
-  include pgadmin3
+#  class { 'appcleaner':    version  => "2.3"  }
+#  include pgadmin3
 
   package { 'evernote': provider => 'brewcask' }
 }
