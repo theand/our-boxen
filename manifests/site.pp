@@ -126,10 +126,6 @@ node default {
 #  include bash::completion
 
 
-  class { 'php::global':  version => '5.6.9' }
-  include php::composer
-  php::fpm { '5.6.9': }
-
 #  include java
 
   include mysql

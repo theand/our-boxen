@@ -71,7 +71,6 @@ github "sudo",        "1.0.0"
 # github "python",  "2.0.1"
 # github "imagemagick",  "1.3.0"
 # github "vagrant",  "3.3.3"
-github "php",  "2.0.1.2", :repo => "theand-boxen/puppet-php"
 github "mysql",  "2.2.0", :repo => "theand-boxen/puppet-mysql"
 # github "spf13vim3",  "1.0.1", :repo => "theand-boxen/puppet-spf13vim3"
 
