@@ -60,7 +60,7 @@ node default {
 
 
   # node versions
-  $node_version = '4.2.3'
+  $node_version = '4.0.0'
   class { 'nodejs::global': version => $node_version }
   npm_module { "bower for ${version}":  module => 'bower', version => '~> 1.4.1', node_version => $version, }
   npm_module { "gulp for ${version}":  module => 'gulp', version => '~> 3.9.0', node_version => $version, }
@@ -93,7 +93,7 @@ node default {
       'w3m',
       'maven',
       'gradle',
-      'tomcat7',
+      'homebrew/versions/tomcat7',
       'autojump',
       'automake',
       'cmake',
@@ -107,9 +107,6 @@ node default {
   }
 
   include openssl
-
-#  phantomjs::version { '2.0.0': }
-#  phantomjs::global { '2.0.0': }
 
   file { "${boxen::config::srcdir}/our-boxen":
     ensure => link,
