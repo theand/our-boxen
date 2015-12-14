@@ -118,11 +118,11 @@ node default {
   # custom Dev Tools by theand
 #  include csshx
 
-#  include bash
-#  include bash::completion
+  include bash
+  include bash::completion
 
 
-#  include java
+  include java
 
   include mysql
   mysql::db { 'mydb': }
