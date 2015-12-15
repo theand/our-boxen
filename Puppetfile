@@ -74,7 +74,7 @@ github "mysql",  "2.2.0", :repo => "theand-boxen/puppet-mysql"
 
 
 # custom Default OS X Settings by theand
-# github "osx",  "2.8.0"
+github "osx",  "2.8.0"
 # github "mathiasdotfiles",  "0.0.2", :repo => "theand-boxen/puppet-mathiasdotfiles"
 
 # custom GUI Apps by theand
