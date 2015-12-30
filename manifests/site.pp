@@ -190,7 +190,7 @@ node default {
 
 #  package { 'github-desktop': provider => 'brewcask' }
 
-#  class { 'vagrant':    version  => "1.7.4",    completion => true  }
+#  class { 'vagrant':    version  => "1.8.1",    completion => true  }
 
 #  include chrome
 #  include sublime_text
