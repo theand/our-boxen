@@ -219,7 +219,7 @@ node default {
 
 #  class { 'sourcetree':    version  => "2.0.5.2"  }
 
-#  class { 'appcleaner':    version  => "2.3"  }
+#  class { 'appcleaner':    version  => "3.2.1"  }
 #  include pgadmin3
 
   package { 'evernote': provider => 'brewcask' }
