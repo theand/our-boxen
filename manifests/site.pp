@@ -1,6 +1,8 @@
 require boxen::environment
 require homebrew
 #require gcc
+
+
 include brewcask
 
 Exec {
@@ -60,24 +62,12 @@ node default {
 
 
   # node versions
-  $node_version = '4.0.0'
+  $node_version = '4.4.5'
   class { 'nodejs::global': version => $node_version }
-  npm_module { "bower for ${version}":  module => 'bower', version => '~> 1.4.1', node_version => $version, }
-  npm_module { "gulp for ${version}":  module => 'gulp', version => '~> 3.9.0', node_version => $version, }
-  npm_module { "grunt-cli for ${version}":  module => 'grunt-cli', version => '~> 0.1.13', node_version => $version, }
-  npm_module { "yo for ${version}":  module => 'yo', version => '~> 1.4.7', node_version => $version, }
-  npm_module { "locally for ${version}":  module => 'locally', version => '~> 0.2.1', node_version => $version, }
-
-  # default ruby versions
-  $ruby_version = "2.2.4"
-  class { 'ruby::global':    version => $ruby_version }
-  # ensure a gem is installed for all ruby versions
-  ruby_gem { 'bundler for all rubies':
-    gem          => 'bundler',
-    version      => '~> 1.10.5',
-    ruby_version => "*",
-  }
-
+  npm_module { "bower for ${version}":  module => 'bower', version => '~> 1.7.8', node_version => $version, }
+  npm_module { "gulp for ${version}":  module => 'gulp', version => '~> 3.9.1', node_version => $version, }
+  npm_module { "grunt-cli for ${version}":  module => 'grunt-cli', version => '~> 1.2.0', node_version => $version, }
+  npm_module { "yo for ${version}":  module => 'yo', version => '~> 1.8.3', node_version => $version, }
 
   # common, useful brew packages
   package {
@@ -93,7 +83,7 @@ node default {
       'w3m',
       'maven',
       'gradle',
-      'homebrew/versions/tomcat7',
+      'tomcat',
       'autojump',
       'automake',
       'cmake',
@@ -102,7 +92,6 @@ node default {
       'tmux',
       'moreutils',
       'icdiff'
-
     ]:
   }
 
@@ -124,11 +113,20 @@ node default {
 
   include java
 
-  include mysql
-  mysql::db { 'mydb': }
-
 #  include python
-#  include imagemagick
+
+  # default ruby versions
+  $ruby_version = "2.2.5"
+  class { 'ruby::global':    version => $ruby_version }
+  # ensure a gem is installed for all ruby versions
+  ruby_gem { 'bundler for all rubies':
+    gem          => 'bundler',
+    version      => '~> 1.12.5',
+    ruby_version => "*",
+  }
+
+#  class { 'vagrant':    version  => "1.8.1",    completion => true  }
+
 #  include spf13vim3
 
 
@@ -143,7 +141,6 @@ node default {
 #  class { 'osx::global::key_repeat_delay':    delay => 30  }
 
 #  include osx::finder::unhide_library
-#  include osx::finder::show_hidden_files
 #  include osx::finder::enable_quicklook_text_selection
 #  include osx::finder::show_all_filename_extensions
 
@@ -172,25 +169,13 @@ node default {
 #  include mathiasdotfiles
 
   # custom GUI Apps by theand
-#  include imageoptim
 #  include xtrafinder
 #  include caffeine
-#  include googledrive
 #  include wunderlist
-#  include picasa
-
-#  class { 'intellij':    edition => 'ultimate',    version => '14.1.5-custom-jdk-bundled'  }
-#  class { 'phpstorm':    version => '10.0.1-custom-jdk-bundled'  }
 
 #  include flux
 
-#  include sequel_pro
-
-#  class { 'virtualbox':    version  => "5.0.10",    patch_level  => "104061"  }
-
-#  package { 'github-desktop': provider => 'brewcask' }
-
-#  class { 'vagrant':    version  => "1.8.1",    completion => true  }
+#  class { 'virtualbox':    version  => "5.0.20",    patch_level  => "106931"  }
 
 #  include chrome
 #  include sublime_text
@@ -198,16 +183,12 @@ node default {
 
 #  include pow
 
-#  class { 'dropbox':    version => '3.12.4'  }
+#  class { 'dropbox':    version => '3.20.1'  }
 
 #  include iterm2::dev
 #  include iterm2::colors::solarized_dark
 
-#  class { 'firefox::nightly':  }
-
-#  include hipchat
-#  class { 'alfred':  version => '2.8.1_425' }
-
+  package { 'alfred': provider => 'brewcask' }
 
 #  include ccleaner
 #  include fonts
@@ -215,12 +196,10 @@ node default {
 #  include mysql_workbench
 #  include haroopad
 #  include p4merge
-#  class {'brackets':    version => '1.5'  }
 
-#  class { 'sourcetree':    version  => "2.0.5.2"  }
+#  class { 'sourcetree':    version  => "2.3"  }
 
-#  class { 'appcleaner':    version  => "3.2.1"  }
-#  include pgadmin3
+#  class { 'appcleaner':    version  => "3.3"  }
 
   package { 'evernote': provider => 'brewcask' }
 }
