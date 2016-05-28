@@ -62,7 +62,7 @@ node default {
 
 
   # node versions
-  $node_version = '4.4.5'
+  $node_version = '4.4.3'
   class { 'nodejs::global': version => $node_version }
   npm_module { "bower for ${version}":  module => 'bower', version => '~> 1.7.8', node_version => $version, }
   npm_module { "gulp for ${version}":  module => 'gulp', version => '~> 3.9.1', node_version => $version, }
