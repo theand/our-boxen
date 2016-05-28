@@ -117,7 +117,7 @@ node default {
     ruby_version => "*",
   }
 
-#  class { 'vagrant':    version  => "1.8.1",    completion => true  }
+  package { 'vagrant': provider => 'brewcask' }
 
 #  include spf13vim3
 
