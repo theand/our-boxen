@@ -81,7 +81,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: theand-boxen/puppet-nodejs
   specs:
-    nodejs (5.0.7.theand)
+    nodejs (5.0.7.2.theand)
 
 GITHUBTARBALL
   remote: theand-boxen/puppet-ruby
@@ -99,7 +99,7 @@ DEPENDENCIES
   java (= 1.8.4)
   module_data (= 0.0.4)
   nginx (= 1.7.0)
-  nodejs (= 5.0.7.theand)
+  nodejs (= 5.0.7.2.theand)
   openssl (= 1.0.0)
   osx (= 2.8.0)
   pkgconfig (= 1.0.0)
