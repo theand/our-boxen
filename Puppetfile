@@ -57,7 +57,6 @@ github "sudo",        "1.0.0"
 
 # custom Dev Tools by theand
 github "bash",  "1.1.0"
-github "java",  "1.8.4"
 # github "python",  "2.0.1"
 github "ruby",        "8.5.5.theand", :repo => "theand-boxen/puppet-ruby"
 # github "vagrant",  "3.3.4"

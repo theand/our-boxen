@@ -103,7 +103,6 @@ node default {
   include bash::completion
 
 
-  include java
   package { 'java': provider => 'brewcask' }
 
 #  include python
