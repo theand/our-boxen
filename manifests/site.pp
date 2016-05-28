@@ -98,13 +98,13 @@ node default {
 
 
   # custom Dev Tools by theand
-#  include csshx
 
   include bash
   include bash::completion
 
 
   include java
+  package { 'java': provider => 'brewcask' }
 
 #  include python
 
@@ -162,37 +162,33 @@ node default {
 #  include mathiasdotfiles
 
   # custom GUI Apps by theand
-#  include xtrafinder
-#  include caffeine
 #  include wunderlist
-
-#  include flux
-
-#  class { 'virtualbox':    version  => "5.0.20",    patch_level  => "106931"  }
-
 #  include chrome
 #  include sublime_text
-#  include atom
-
 #  include pow
-
-#  class { 'dropbox':    version => '3.20.1'  }
 
 #  include iterm2::dev
 #  include iterm2::colors::solarized_dark
 
-  package { 'alfred': provider => 'brewcask' }
-
-#  include ccleaner
 #  include fonts
 
-#  include mysql_workbench
-#  include haroopad
-#  include p4merge
-
-#  class { 'sourcetree':    version  => "2.3"  }
-
-#  class { 'appcleaner':    version  => "3.3"  }
-
+  package { 'xtrafinder': provider => 'brewcask' }
+  package { 'virtualbox': provider => 'brewcask' }
+  package { 'flux': provider => 'brewcask' }
+  package { 'dropbox': provider => 'brewcask' }
+  package { 'atom': provider => 'brewcask' }
+  package { 'alfred': provider => 'brewcask' }
+  package { 'ccleaner': provider => 'brewcask' }
+  package { 'mysqlworkbench': provider => 'brewcask' }
+  package { 'haroopad': provider => 'brewcask' }
+  package { 'p4merge': provider => 'brewcask' }
+  package { 'sourcetree': provider => 'brewcask' }
+  package { 'appcleaner': provider => 'brewcask' }
   package { 'evernote': provider => 'brewcask' }
+  package { 'slack': provider => 'brewcask' }
+  package { 'bettertouchtool': provider => 'brewcask' }
+  package { 'gureumkim': provider => 'brewcask' }
+
+
+
 }
