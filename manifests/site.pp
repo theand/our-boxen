@@ -61,14 +61,6 @@ node default {
   include nginx
 
 
-  # node versions
-  $node_version = '4.4.3'
-  class { 'nodejs::global': version => $node_version }
-  npm_module { "bower for ${version}":  module => 'bower', version => '~> 1.7.8', node_version => $version, }
-  npm_module { "gulp for ${version}":  module => 'gulp', version => '~> 3.9.1', node_version => $version, }
-  npm_module { "grunt-cli for ${version}":  module => 'grunt-cli', version => '~> 1.2.0', node_version => $version, }
-  npm_module { "yo for ${version}":  module => 'yo', version => '~> 1.8.3', node_version => $version, }
-
   # common, useful brew packages
   package {
     [
@@ -91,7 +83,8 @@ node default {
       'mr',
       'tmux',
       'moreutils',
-      'icdiff'
+      'icdiff',
+      'node'
     ]:
   }
 

@@ -79,11 +79,6 @@ GITHUBTARBALL
     homebrew (2.0.2.0.theand)
 
 GITHUBTARBALL
-  remote: theand-boxen/puppet-nodejs
-  specs:
-    nodejs (5.0.7.theand)
-
-GITHUBTARBALL
   remote: theand-boxen/puppet-ruby
   specs:
     ruby (8.5.5.theand)
@@ -99,7 +94,6 @@ DEPENDENCIES
   java (= 1.8.4)
   module_data (= 0.0.4)
   nginx (= 1.7.0)
-  nodejs (= 5.0.7.theand)
   openssl (= 1.0.0)
   osx (= 2.8.0)
   pkgconfig (= 1.0.0)
