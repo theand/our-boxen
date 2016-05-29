@@ -158,7 +158,7 @@ node default {
   include sublime_text
   include pow
 
-  include iterm2::dev
+  include iterm2::stable
   include iterm2::colors::solarized_dark
 
 
