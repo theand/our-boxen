@@ -1,9 +1,8 @@
 require boxen::environment
 require homebrew
-#require gcc
-
-
 include brewcask
+require gcc
+
 
 Exec {
   group       => 'staff',
@@ -73,9 +72,7 @@ node default {
       'the_silver_searcher',
       'tree',
       'w3m',
-      'maven',
       'gradle',
-      'tomcat',
       'autojump',
       'automake',
       'cmake',
@@ -96,14 +93,10 @@ node default {
   }
 
 
-
   # custom Dev Tools by theand
 
   include bash
   include bash::completion
-
-
-  package { 'java': provider => 'brewcask' }
 
 #  include python
 
@@ -117,66 +110,62 @@ node default {
     ruby_version => "*",
   }
 
-  package { 'vagrant': provider => 'brewcask' }
 
-#  include spf13vim3
+  include spf13vim3
 
 
   # custom Default OS X Settings by theand
-#  include osx::global::disable_key_press_and_hold
-#  include osx::global::enable_keyboard_control_access
-#  include osx::global::expand_print_dialog
-#  include osx::global::expand_save_dialog
-#  include osx::global::disable_autocorrect
-#  include osx::global::tap_to_click
-#  include osx::global::key_repeat_rate
-#  class { 'osx::global::key_repeat_delay':    delay => 30  }
+  include osx::global::disable_key_press_and_hold
+  include osx::global::enable_keyboard_control_access
+  include osx::global::expand_print_dialog
+  include osx::global::expand_save_dialog
+  include osx::global::disable_autocorrect
+  include osx::global::tap_to_click
+  include osx::global::key_repeat_rate
+  class { 'osx::global::key_repeat_delay':    delay => 30  }
 
-#  include osx::finder::unhide_library
-#  include osx::finder::enable_quicklook_text_selection
-#  include osx::finder::show_all_filename_extensions
+  include osx::finder::unhide_library
+  include osx::finder::enable_quicklook_text_selection
+  include osx::finder::show_all_filename_extensions
 
-#  include osx::universal_access::ctrl_mod_zoom
-#  include osx::universal_access::enable_scrollwheel_zoom
-#  include osx::safari::enable_developer_mode
+  include osx::universal_access::ctrl_mod_zoom
+  include osx::universal_access::enable_scrollwheel_zoom
+  include osx::safari::enable_developer_mode
 
-#  include osx::disable_app_quarantine
-#  include osx::no_network_dsstores
+  include osx::disable_app_quarantine
+  include osx::no_network_dsstores
 
-#  include osx::dock::icon_size
-#  include osx::dock::pin_position
-#  include osx::dock::dim_hidden_apps
+  include osx::dock::icon_size
+  include osx::dock::pin_position
+  include osx::dock::dim_hidden_apps
 
-#  class { 'osx::dock::magnification':
-#    magnification => true,
-#    magnification_size => 84
-#  }
+  class { 'osx::dock::magnification':
+    magnification => true,
+    magnification_size => 84
+  }
 
-#  class { 'osx::dock::position':    position => 'left'  }
-#  class { 'osx::mouse::smart_zoom':    enabled => true  }
-#  class { 'osx::mouse::swipe_between_pages':    enabled => true  }
+  class { 'osx::dock::position':    position => 'left'  }
+  class { 'osx::mouse::smart_zoom':    enabled => true  }
+  class { 'osx::mouse::swipe_between_pages':    enabled => true  }
 
-#  include osx::sound::interface_sound_effects
+  include osx::sound::interface_sound_effects
 
-#  include mathiasdotfiles
+  include mathiasdotfiles
 
   # custom GUI Apps by theand
-#  include wunderlist
-#  include chrome
-#  include sublime_text
-#  include pow
+  include wunderlist
+  include chrome
+  include sublime_text
+  include pow
 
-#  include iterm2::dev
-#  include iterm2::colors::solarized_dark
+  include iterm2::dev
+  include iterm2::colors::solarized_dark
 
-#  include fonts
+  include fonts
 
-  package { 'xtrafinder': provider => 'brewcask' }
-  package { 'virtualbox': provider => 'brewcask' }
   package { 'flux': provider => 'brewcask' }
   package { 'dropbox': provider => 'brewcask' }
   package { 'atom': provider => 'brewcask' }
-  package { 'alfred': provider => 'brewcask' }
   package { 'ccleaner': provider => 'brewcask' }
   package { 'mysqlworkbench': provider => 'brewcask' }
   package { 'haroopad': provider => 'brewcask' }
@@ -185,9 +174,5 @@ node default {
   package { 'appcleaner': provider => 'brewcask' }
   package { 'evernote': provider => 'brewcask' }
   package { 'slack': provider => 'brewcask' }
-  package { 'bettertouchtool': provider => 'brewcask' }
-  package { 'gureumkim': provider => 'brewcask' }
-
-
 
 }
