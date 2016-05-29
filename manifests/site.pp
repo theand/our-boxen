@@ -164,10 +164,8 @@ node default {
 
   package { 'flux': provider => 'brewcask' }
   package { 'dropbox': provider => 'brewcask' }
-  package { 'atom': provider => 'brewcask' }
   package { 'ccleaner': provider => 'brewcask' }
   package { 'mysqlworkbench': provider => 'brewcask' }
-  package { 'haroopad': provider => 'brewcask' }
   package { 'p4merge': provider => 'brewcask' }
   package { 'sourcetree': provider => 'brewcask' }
   package { 'appcleaner': provider => 'brewcask' }

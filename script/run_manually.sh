@@ -12,3 +12,6 @@ brew cask install xtrafinder
 brew cask install bettertouchtool
 brew cask install virtualbox
 brew cask install vagrant
+brew cask install atom
+brew cask install haroopad
+brew cask install macvim
