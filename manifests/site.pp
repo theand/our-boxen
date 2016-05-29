@@ -161,7 +161,6 @@ node default {
   include iterm2::dev
   include iterm2::colors::solarized_dark
 
-  include fonts
 
   package { 'flux': provider => 'brewcask' }
   package { 'dropbox': provider => 'brewcask' }

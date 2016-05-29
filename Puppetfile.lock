@@ -104,11 +104,6 @@ GITHUBTARBALL
     boxen (3.11.1.theand)
 
 GITHUBTARBALL
-  remote: theand-boxen/puppet-fonts
-  specs:
-    fonts (0.0.7)
-
-GITHUBTARBALL
   remote: theand-boxen/puppet-homebrew
   specs:
     homebrew (2.0.2.0.theand)
@@ -139,7 +134,6 @@ DEPENDENCIES
   brewcask (= 0.0.7)
   chrome (= 1.2.0)
   dnsmasq (= 2.0.1)
-  fonts (= 0.0.7)
   gcc (= 3.0.2)
   git (= 2.8.1)
   homebrew (= 2.0.2.0.theand)
