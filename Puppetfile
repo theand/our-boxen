@@ -29,7 +29,7 @@ end
 # Includes many of our custom types and providers, as well as global
 # config. Required.
 
-github "boxen", "3.11.1.theand", :repo => "theand-boxen/puppet-boxen"
+github "boxen", "3.11.2.theand", :repo => "theand-boxen/puppet-boxen"
 
 # Support for default hiera data in modules
 
