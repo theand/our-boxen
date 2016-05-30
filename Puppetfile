@@ -67,7 +67,6 @@ github "osx",  "2.8.0"
 github "mathiasdotfiles",  "0.0.2", :repo => "theand-boxen/puppet-mathiasdotfiles"
 
 # custom GUI Apps by theand
-github "wunderlist",  "1.0.0"
 github "chrome",  "1.2.0"
 github "sublime_text",  "1.1.0"
 github "pow",  "2.3.2"

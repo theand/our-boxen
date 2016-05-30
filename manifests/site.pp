@@ -153,7 +153,6 @@ node default {
   include mathiasdotfiles
 
   # custom GUI Apps by theand
-  include wunderlist
   include chrome
   include sublime_text
   include pow
