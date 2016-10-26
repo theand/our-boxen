@@ -81,7 +81,9 @@ node default {
       'tmux',
       'moreutils',
       'icdiff',
-      'node'
+      'node',
+      'bash',
+      'bash-completion2'
     ]:
   }
 
@@ -95,8 +97,6 @@ node default {
 
   # custom Dev Tools by theand
 
-  include bash
-  include bash::completion
 
 #  include python
 

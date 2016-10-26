@@ -56,7 +56,6 @@ github "xquartz",     "1.2.1"
 # https://github.com/boxen.
 
 # custom Dev Tools by theand
-github "bash",  "1.1.0"
 github "python",  "2.0.1"
 github "ruby",        "8.5.5.theand", :repo => "theand-boxen/puppet-ruby"
 github "spf13vim3",  "1.0.1", :repo => "theand-boxen/puppet-spf13vim3"
