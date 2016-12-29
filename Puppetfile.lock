@@ -66,7 +66,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: theand-boxen/puppet-homebrew
   specs:
-    homebrew (2.1.0.1.theand)
+    homebrew (2.0.2.0.theand)
 
 GITHUBTARBALL
   remote: theand-boxen/puppet-iterm2
@@ -93,7 +93,7 @@ DEPENDENCIES
   brewcask (= 0.0.7)
   gcc (= 3.0.2)
   git (= 2.11.0)
-  homebrew (= 2.1.0.1.theand)
+  homebrew (= 2.0.2.0.theand)
   inifile (= 1.6.0)
   iterm2 (= 1.2.5.2.theand)
   mathiasdotfiles (= 0.0.2.theand)
