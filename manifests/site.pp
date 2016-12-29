@@ -61,26 +61,40 @@ node default {
   package {
     [
       'ack',
-      'findutils',
-      'gnu-tar',
-      'dos2unix',
-      'privoxy',
-      'git-flow',
-      'the_silver_searcher',
-      'tree',
-      'w3m',
-      'gradle',
       'autojump',
       'automake',
+      'bash',
+      'bash-completion2',
       'cmake',
       'ctags',
-      'mr',
-      'tmux',
-      'moreutils',
+      'dos2unix',
+      'findutils',
+      'fzf',
+      'git-flow',
+      'git-lfs',
+      'gnu-sed',
+      'gnu-tar',
+      'go',
+      'gradle',
+      'grep',
+      'httpie',
       'icdiff',
+      'imagemagick',
+      'maven',
+      'moreutils',
+      'mr',
       'node',
-      'bash',
-      'bash-completion2'
+      'openssl'
+      'privoxy',
+      'recode',
+      'ssh-copy-id',
+      'the_silver_searcher',
+      'tmux',
+      'tomcat',
+      'tree',
+      'vim',
+      'w3m',
+      'wget'
     ]:
   }
 
@@ -92,24 +106,20 @@ node default {
 
   # custom Dev Tools by theand
 
-
-#  include python
-
-  # default ruby versions
-  $ruby_version = "2.2.5"
+  $ruby_version = "2.4.0"
   class { 'ruby::global':    version => $ruby_version }
   # ensure a gem is installed for all ruby versions
   ruby_gem { 'bundler for all rubies':
     gem          => 'bundler',
-    version      => '~> 1.12.5',
+    version      => '~> 1.13.7',
     ruby_version => "*",
   }
 
 
   include spf13vim3
+  include mathiasdotfiles
 
-
-  # custom Default OS X Settings by theand
+  # START - custom Default OS X Settings by theand
   include osx::global::disable_key_press_and_hold
   include osx::global::enable_keyboard_control_access
   include osx::global::expand_print_dialog
@@ -144,8 +154,7 @@ node default {
   class { 'osx::mouse::swipe_between_pages':    enabled => true  }
 
   include osx::sound::interface_sound_effects
-
-  include mathiasdotfiles
+  # END
 
   # custom GUI Apps by theand
   include sublime_text
@@ -153,16 +162,15 @@ node default {
   include iterm2::stable
   include iterm2::colors::solarized_dark
 
-
-  package { 'flux': provider => 'brewcask' }
-  package { 'dropbox': provider => 'brewcask' }
+  package { 'appcleaner': provider => 'brewcask' }
   package { 'ccleaner': provider => 'brewcask' }
   package { 'chrome': provider => 'brewcask' }
+  package { 'dropbox': provider => 'brewcask' }
+  package { 'evernote': provider => 'brewcask' }
+  package { 'flux': provider => 'brewcask' }
   package { 'mysqlworkbench': provider => 'brewcask' }
   package { 'p4merge': provider => 'brewcask' }
-  package { 'sourcetree': provider => 'brewcask' }
-  package { 'appcleaner': provider => 'brewcask' }
-  package { 'evernote': provider => 'brewcask' }
   package { 'slack': provider => 'brewcask' }
+  package { 'sourcetree': provider => 'brewcask' }
 
 }
