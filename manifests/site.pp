@@ -84,8 +84,6 @@ node default {
     ]:
   }
 
-  include openssl
-
   file { "${boxen::config::srcdir}/our-boxen":
     ensure => link,
     target => $boxen::config::repodir
@@ -150,7 +148,6 @@ node default {
   include mathiasdotfiles
 
   # custom GUI Apps by theand
-  include chrome
   include sublime_text
 
   include iterm2::stable
@@ -160,6 +157,7 @@ node default {
   package { 'flux': provider => 'brewcask' }
   package { 'dropbox': provider => 'brewcask' }
   package { 'ccleaner': provider => 'brewcask' }
+  package { 'chrome': provider => 'brewcask' }
   package { 'mysqlworkbench': provider => 'brewcask' }
   package { 'p4merge': provider => 'brewcask' }
   package { 'sourcetree': provider => 'brewcask' }
