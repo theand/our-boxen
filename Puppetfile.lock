@@ -1,22 +1,7 @@
 GITHUBTARBALL
-  remote: boxen/puppet-bash
-  specs:
-    bash (1.1.0)
-
-GITHUBTARBALL
   remote: boxen/puppet-brewcask
   specs:
     brewcask (0.0.7)
-
-GITHUBTARBALL
-  remote: boxen/puppet-chrome
-  specs:
-    chrome (1.2.0)
-
-GITHUBTARBALL
-  remote: boxen/puppet-dnsmasq
-  specs:
-    dnsmasq (2.0.2)
 
 GITHUBTARBALL
   remote: boxen/puppet-gcc
@@ -26,32 +11,12 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-git
   specs:
-    git (2.8.1)
-
-GITHUBTARBALL
-  remote: boxen/puppet-nginx
-  specs:
-    nginx (1.7.0)
-
-GITHUBTARBALL
-  remote: boxen/puppet-openssl
-  specs:
-    openssl (1.0.0)
+    git (2.11.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-osx
   specs:
     osx (2.8.0)
-
-GITHUBTARBALL
-  remote: boxen/puppet-pkgconfig
-  specs:
-    pkgconfig (1.0.0)
-
-GITHUBTARBALL
-  remote: boxen/puppet-pow
-  specs:
-    pow (2.3.2)
 
 GITHUBTARBALL
   remote: boxen/puppet-python
@@ -66,17 +31,12 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-sublime_text
   specs:
-    sublime_text (1.1.0)
+    sublime_text (1.1.1)
 
 GITHUBTARBALL
   remote: boxen/puppet-sudo
   specs:
     sudo (1.0.0)
-
-GITHUBTARBALL
-  remote: boxen/puppet-wunderlist
-  specs:
-    wunderlist (1.0.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-xquartz
@@ -86,12 +46,12 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: puppetlabs/puppetlabs-inifile
   specs:
-    inifile (1.5.0)
+    inifile (1.6.0)
 
 GITHUBTARBALL
   remote: puppetlabs/puppetlabs-stdlib
   specs:
-    stdlib (4.12.0)
+    stdlib (4.14.0)
 
 GITHUBTARBALL
   remote: ripienaar/puppet-module-data
@@ -101,58 +61,50 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: theand-boxen/puppet-boxen
   specs:
-    boxen (3.11.1.theand)
+    boxen (3.11.2.theand)
 
 GITHUBTARBALL
   remote: theand-boxen/puppet-homebrew
   specs:
-    homebrew (2.0.2.0.theand)
+    homebrew (2.1.0.theand)
 
 GITHUBTARBALL
   remote: theand-boxen/puppet-iterm2
   specs:
-    iterm2 (1.2.5.2)
+    iterm2 (1.2.5.2.theand)
 
 GITHUBTARBALL
   remote: theand-boxen/puppet-mathiasdotfiles
   specs:
-    mathiasdotfiles (0.0.2)
+    mathiasdotfiles (0.0.2.theand)
 
 GITHUBTARBALL
   remote: theand-boxen/puppet-ruby
   specs:
-    ruby (8.5.5.theand)
+    ruby (8.5.6.theand)
 
 GITHUBTARBALL
   remote: theand-boxen/puppet-spf13vim3
   specs:
-    spf13vim3 (1.0.1)
+    spf13vim3 (1.0.2.theand)
 
 DEPENDENCIES
-  bash (= 1.1.0)
-  boxen (= 3.11.1.theand)
+  boxen (= 3.11.2.theand)
   brewcask (= 0.0.7)
-  chrome (= 1.2.0)
-  dnsmasq (= 2.0.2)
   gcc (= 3.0.2)
-  git (= 2.8.1)
-  homebrew (= 2.0.2.0.theand)
-  inifile (= 1.5.0)
-  iterm2 (= 1.2.5.2)
-  mathiasdotfiles (= 0.0.2)
+  git (= 2.11.0)
+  homebrew (= 2.1.0.theand)
+  inifile (= 1.6.0)
+  iterm2 (= 1.2.5.2.theand)
+  mathiasdotfiles (= 0.0.2.theand)
   module_data (= 0.0.4)
-  nginx (= 1.7.0)
-  openssl (= 1.0.0)
   osx (= 2.8.0)
-  pkgconfig (= 1.0.0)
-  pow (= 2.3.2)
   python (= 2.0.1)
   repository (= 2.4.1)
-  ruby (= 8.5.5.theand)
-  spf13vim3 (= 1.0.1)
-  stdlib (= 4.12.0)
-  sublime_text (= 1.1.0)
+  ruby (= 8.5.6.theand)
+  spf13vim3 (= 1.0.2.theand)
+  stdlib (= 4.14.0)
+  sublime_text (= 1.1.1)
   sudo (= 1.0.0)
-  wunderlist (= 1.0.0)
   xquartz (= 1.2.1)
 
