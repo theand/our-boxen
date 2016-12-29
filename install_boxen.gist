@@ -1,0 +1,142 @@
+## Save At : https://gist.github.com/theand/2b86ae3fc64527cd804e
+
+set -e
+set -u
+
+# clean up /tmp/install-boxen on exit if we were run like that
+if [ "$0" = "/tmp/install-boxen" ]; then
+    trap 'rm -f /tmp/install-boxen' EXIT
+fi
+
+set +e
+OSX_VERSION=$(sw_vers -productVersion | awk -F "." '{print $2}')
+
+if [ "$OSX_VERSION" -lt 8 ] || [ "$OSX_VERSION" -gt 12 ]; then
+    echo 'You must be running on Mountain Lion, Mavericks, Yosemite, El Capitan or Sierra!'
+    exit 1
+fi
+set -e
+
+# show the banner and wait for a response
+printf "%s" $'\e[1;32m
+    ########   #######  ##     ## ######## ##    ##
+    ##     ## ##     ##  ##   ##  ##       ###   ##
+    ##     ## ##     ##   ## ##   ##       ####  ##
+    ########  ##     ##    ###    ######   ## ## ##
+    ##     ## ##     ##   ## ##   ##       ##  ####
+    ##     ## ##     ##  ##   ##  ##       ##   ###
+    ########   #######  ##     ## ######## ##    ##\e[1;31m
+\e[0m
+    Hello! I\'m going to set up this machine for you. It might take me a bit
+    of time before I\'m done, but you\'ll end up with a happy machine by the
+    end of it.
+\e[0;1m
+    Ready to get started? Hit a key with your favorite finger.\e[0m'
+read -n 1 -s
+
+# prompt for sudo access. if correct we're good to go.
+echo "
+
+--> For added privacy invasion I'll need your local account's password."
+sudo -p "    Password for sudo: " echo "    Sweet, thanks. I'll see you in Vegas, sucker."
+
+# on 10.9 and above we can leverage SUS to get the latest CLI tools
+if [[ "$OSX_VERSION" -ge 9 ]] && [[ ! -d /usr/include ]]; then
+  echo "
+--> Installing command-line tools for OS X ${OSX_VERSION}"
+
+  [ "$OSX_VERSION" -eq 9 ]  && TOOLS_REGEX="Command Line Developer"
+  [ "$OSX_VERSION" -ge 10 ] && TOOLS_REGEX="Command Line Tools"
+  PLACEHOLDER=/tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress
+
+  # create the placeholder file that's checked by CLI updates' .dist code
+  # in Apple's SUS catalog
+  touch $PLACEHOLDER
+
+  # find the update with the right name, and grab its identifier
+  PROD=$(softwareupdate -l | grep -B 1 "${TOOLS_REGEX}" | \
+         awk -F"*" '/^ +\*/ {print $2}' | sed 's/^ *//' | head -n 1)
+
+  # install it
+  softwareupdate -i "${PROD}"
+
+  # remove the placeholder
+  [[ -f $PLACEHOLDER ]] && rm $PLACEHOLDER
+else
+  if [[ ! -f /usr/bin/gcc ]]; then
+    echo "
+--> Installing command-line tools for Mavericks"
+
+    # on 10.8, we instead download from public download URLs, which can
+    # be found in the dvtdownloadableindex:
+    # https://devimages.apple.com.edgekey.net/downloads/xcode/simulators/index-3905972D-B609-49CE-8D06-51ADC78E07BC.dvtdownloadableindex
+    DMGURL=http://devimages.apple.com/downloads/xcode/command_line_tools_for_osx_mountain_lion_april_2014.dmg
+
+    TOOLS=/tmp/clitools.dmg
+    curl "$DMGURL" -o "$TOOLS"
+    TMPMOUNT=`/usr/bin/mktemp -d /tmp/clitools.XXXX`
+    hdiutil attach "$TOOLS" -mountpoint "$TMPMOUNT"
+    installer -pkg "$(find $TMPMOUNT -name '*.mpkg')" -target /
+    hdiutil detach "$TMPMOUNT"
+    rm -rf "$TMPMOUNT"
+    rm "$TOOLS"
+  fi
+fi
+
+# Correct a ruby config bug in Yosemite DP7
+# Apple radar 18216493 filed 2014-09-03
+#
+# This manifests as being unable to install gems with C extensions,
+# because the linker will fail unable to find the CrashReporterSupport
+# framework
+if [ "$OSX_VERSION" -eq 10 ]; then
+  RBCONFIG=/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/universal-darwin14/rbconfig.rb
+  INTERNAL_SDK=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.Internal.sdk
+
+  if grep -q $INTERNAL_SDK $RBCONFIG; then
+    sudo sed -i '' s:$INTERNAL_SDK:: $RBCONFIG
+  fi
+fi
+
+echo "
+--> Making sure /opt/boxen exists and belongs to you."
+
+sudo mkdir -p /opt/boxen
+sudo chown $USER:staff /opt/boxen
+
+if [ ! -f /opt/boxen/repo/.snapshot ]; then
+  echo
+  echo "--> Grabbing code and extracting. Be patient this may take a while."
+
+  mkdir -p /opt/boxen/repo
+  cd /opt/boxen/repo
+
+  curl --progress-bar -L 'https://github.com/theand/our-boxen/archive/master.tar.gz' | tar -xz - --strip-components 1 && touch .snapshot
+fi
+
+echo "
+--> Configuring. Prepare for a long wait and some weird output.
+    I might have to ask you for your password again too."
+
+# Make sure sudo hasn't timed out.
+
+sudo -p "    Password for sudo again: "  true
+
+cd /opt/boxen/repo
+export BOXEN_REPO_NAME=theand/our-boxen
+
+CLT_VERSION=`pkgutil --pkg-info=com.apple.pkg.CLTools_Executables | grep version | cut -f 2 -d ' ' | awk ' { print $1; } '`
+
+# Fix for LLVM that ships with Xcode 5.1
+if [[ $CLT_VERSION =~ ^5\.1\.0\.0\.1\.1396320587 ]]; then
+  export ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future
+fi
+
+script/boxen
+
+cd $HOME
+
+echo "
+You're good to go! Make sure to source /opt/boxen/env.sh in your
+shell config if you want all the good stuff to work.
+"
