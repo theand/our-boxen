@@ -74,14 +74,11 @@ node default {
       'git-lfs',
       'gnu-sed',
       'gnu-tar',
-      'go',
-      'gradle',
       'grep',
       'httpie',
       'icdiff',
       'imagemagick',
       'moreutils',
-      'mr',
       'node',
       'openssl',
       'privoxy',
@@ -91,7 +88,6 @@ node default {
       'tmux',
       'tree',
       'vim',
-      'w3m',
       'wget'
     ]:
   }
@@ -161,14 +157,29 @@ node default {
   include iterm2::colors::solarized_dark
 
   package { 'appcleaner': provider => 'brewcask' }
+  package { 'appdelete': provider => 'brewcask' }
   package { 'ccleaner': provider => 'brewcask' }
-  package { 'chrome': provider => 'brewcask' }
+  package { 'google-chrome': provider => 'brewcask' }
+  package { 'google-drive': provider => 'brewcask' }
+  package { 'ccleaner': provider => 'brewcask' }
   package { 'dropbox': provider => 'brewcask' }
+  package { 'duet': provider => 'brewcask' }
   package { 'evernote': provider => 'brewcask' }
+  package { 'firefox': provider => 'brewcask' }
+  package { 'firefoxdeveloperedition': provider => 'brewcask' }
   package { 'flux': provider => 'brewcask' }
+  package { 'hyper': provider => 'brewcask' }
+  package { 'macdown': provider => 'brewcask' }
+  package { 'malwarebytes-anti-malware': provider => 'brewcask' }
   package { 'mysqlworkbench': provider => 'brewcask' }
+  package { 'near-lock': provider => 'brewcask' }
+  package { 'opera': provider => 'brewcask' }
   package { 'p4merge': provider => 'brewcask' }
+  package { 'pgadmin4': provider => 'brewcask' }
+  package { 'scroll-reverser': provider => 'brewcask' }
   package { 'slack': provider => 'brewcask' }
   package { 'sourcetree': provider => 'brewcask' }
+  package { 'telegram-desktop': provider => 'brewcask' }
+  package { 'vmware-horizon-client': provider => 'brewcask' }
 
 }
