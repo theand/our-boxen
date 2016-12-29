@@ -55,10 +55,7 @@ Homebrew::Formula <| |> -> Package <| |>
 
 node default {
   # core modules, needed for most things
-  include dnsmasq
   include git
-  include nginx
-
 
   # common, useful brew packages
   package {
@@ -155,7 +152,6 @@ node default {
   # custom GUI Apps by theand
   include chrome
   include sublime_text
-  include pow
 
   include iterm2::stable
   include iterm2::colors::solarized_dark
