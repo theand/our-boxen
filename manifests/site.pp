@@ -83,7 +83,7 @@ node default {
       'moreutils',
       'mr',
       'node',
-      'openssl'
+      'openssl',
       'privoxy',
       'recode',
       'ssh-copy-id',
