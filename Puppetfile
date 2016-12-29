@@ -40,12 +40,11 @@ github "module_data", "0.0.4", :repo => "ripienaar/puppet-module-data"
 
 github "brewcask",    "0.0.7"
 github "gcc",         "3.0.2"
-github "git",         "2.10.0"
-github "homebrew",    "2.0.2.0.theandTODO", :repo => "theand-boxen/puppet-homebrew"
-github "inifile",     "1.5.0", :repo => "puppetlabs/puppetlabs-inifile"
-github "pkgconfig",   "1.0.0"
+github "git",         "2.11.0"
+github "homebrew",    "2.1.0.theand", :repo => "theand-boxen/puppet-homebrew"
+github "inifile",     "1.6.0", :repo => "puppetlabs/puppetlabs-inifile"
 github "repository",  "2.4.1"
-github "stdlib",      "4.12.0", :repo => "puppetlabs/puppetlabs-stdlib"
+github "stdlib",      "4.14.0", :repo => "puppetlabs/puppetlabs-stdlib"
 github "sudo",        "1.0.0"
 github "xquartz",     "1.2.1"
 
@@ -54,14 +53,14 @@ github "xquartz",     "1.2.1"
 
 # custom Dev Tools by theand
 github "python",  "2.0.1"
-github "ruby",        "8.5.5.theand", :repo => "theand-boxen/puppet-ruby"
-github "spf13vim3",  "1.0.1", :repo => "theand-boxen/puppet-spf13vim3"
+github "ruby",        "8.5.6.theand", :repo => "theand-boxen/puppet-ruby"
+github "spf13vim3",  "1.0.2.theand", :repo => "theand-boxen/puppet-spf13vim3"
 
 
 # custom Default OS X Settings by theand
 github "osx",  "2.8.0"
-github "mathiasdotfiles",  "0.0.2", :repo => "theand-boxen/puppet-mathiasdotfiles"
+github "mathiasdotfiles",  "0.0.2.theand", :repo => "theand-boxen/puppet-mathiasdotfiles"
 
 # custom GUI Apps by theand
-github "sublime_text",  "1.1.0"
-github "iterm2",  "1.2.5.2", :repo => "theand-boxen/puppet-iterm2"
+github "sublime_text",  "1.1.1"
+github "iterm2",  "1.2.5.2.theand", :repo => "theand-boxen/puppet-iterm2"
