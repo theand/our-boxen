@@ -8,11 +8,10 @@ brew install maven
 brew install grep
 
 brew cask install alfred
-brew cask install atom
+#brew cask install atom
 brew cask install bettertouchtool
 brew cask install docker
 brew cask install gureumkim
-brew cask install haroopad
 brew cask install macvim
 brew cask install vagrant
 brew cask install virtualbox

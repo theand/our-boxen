@@ -156,6 +156,7 @@ node default {
 
   package { 'appcleaner': provider => 'brewcask' }
   package { 'appdelete': provider => 'brewcask' }
+  package { 'atom': provider => 'brewcask' }
   package { 'ccleaner': provider => 'brewcask' }
   package { 'dropbox': provider => 'brewcask' }
   package { 'duet': provider => 'brewcask' }
