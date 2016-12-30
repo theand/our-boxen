@@ -1,7 +1,6 @@
 require boxen::environment
 require homebrew
 include brewcask
-require gcc
 
 
 Exec {
