@@ -1,9 +1,5 @@
 #!/bin/bash
 
-brew update
-brew upgrade
-brew cask update
-
 # these package needs admin's password during installation.
 
 brew cask install java
