@@ -74,7 +74,6 @@ node default {
       'git-lfs',
       'gnu-sed',
       'gnu-tar',
-      'grep',
       'httpie',
       'icdiff',
       'imagemagick',
@@ -163,7 +162,6 @@ node default {
   package { 'duet': provider => 'brewcask' }
   package { 'evernote': provider => 'brewcask' }
   package { 'firefox': provider => 'brewcask' }
-  package { 'firefoxdeveloperedition': provider => 'brewcask' }
   package { 'flux': provider => 'brewcask' }
   package { 'google-chrome': provider => 'brewcask' }
   package { 'google-drive': provider => 'brewcask' }

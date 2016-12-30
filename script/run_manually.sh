@@ -1,5 +1,7 @@
 #!/bin/bash
 
+brew update
+brew upgrade
 brew cask update
 
 # these package needs admin's password during installation.
@@ -7,6 +9,7 @@ brew cask update
 brew cask install java
 brew install tomcat
 brew install maven
+brew install grep
 
 brew cask install alfred
 brew cask install atom
