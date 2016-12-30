@@ -5,7 +5,7 @@
 brew cask install java
 brew install tomcat
 brew install maven
-brew install grep
+brew install gradle
 
 brew cask install alfred
 #brew cask install atom
