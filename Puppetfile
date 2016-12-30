@@ -38,7 +38,7 @@ github "module_data", "0.0.4", :repo => "ripienaar/puppet-module-data"
 # Core modules for a basic development environment. You can replace
 # some/most of these if you want, but it's not recommended.
 
-github "brewcask",    "0.0.7.theand", :repo => "theand-boxen/puppet-brewcask"
+github "brewcask",    "0.0.7.1.theand", :repo => "theand-boxen/puppet-brewcask"
 github "git",         "2.11.0"
 github "homebrew",    "2.0.2.0.theand", :repo => "theand-boxen/puppet-homebrew"
 github "inifile",     "1.6.0", :repo => "puppetlabs/puppetlabs-inifile"

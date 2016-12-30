@@ -61,7 +61,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: theand-boxen/puppet-brewcask
   specs:
-    brewcask (0.0.7.theand)
+    brewcask (0.0.7.1.theand)
 
 GITHUBTARBALL
   remote: theand-boxen/puppet-homebrew
@@ -90,7 +90,7 @@ GITHUBTARBALL
 
 DEPENDENCIES
   boxen (= 3.11.2.theand)
-  brewcask (= 0.0.7.theand)
+  brewcask (= 0.0.7.1.theand)
   git (= 2.11.0)
   homebrew (= 2.0.2.0.theand)
   inifile (= 1.6.0)
