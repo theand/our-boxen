@@ -80,7 +80,6 @@ node default {
       'node',
       'openssl',
       'privoxy',
-      'recode',
       'ssh-copy-id',
       'the_silver_searcher',
       'tmux',
@@ -165,7 +164,6 @@ node default {
   package { 'flux': provider => 'brewcask' }
   package { 'google-chrome': provider => 'brewcask' }
   package { 'google-drive': provider => 'brewcask' }
-  package { 'hyper': provider => 'brewcask' }
   package { 'macdown': provider => 'brewcask' }
   package { 'malwarebytes-anti-malware': provider => 'brewcask' }
   package { 'mysqlworkbench': provider => 'brewcask' }
