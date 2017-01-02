@@ -40,7 +40,7 @@ github "module_data", "0.0.4", :repo => "ripienaar/puppet-module-data"
 
 github "brewcask",    "0.0.7.1.theand", :repo => "theand-boxen/puppet-brewcask"
 github "git",         "2.11.0"
-github "homebrew",    "2.0.2.0.theand", :repo => "theand-boxen/puppet-homebrew"
+github "homebrew",    "2.1.0.2.theand", :repo => "theand-boxen/puppet-homebrew"
 github "inifile",     "1.6.0", :repo => "puppetlabs/puppetlabs-inifile"
 github "pkgconfig",   "1.0.0"
 github "repository",  "2.4.1"

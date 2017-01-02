@@ -56,13 +56,12 @@ class homebrew(
     command => "git init -q &&
                 git config remote.origin.url https://github.com/${repo} &&
                 git config remote.origin.fetch master:refs/remotes/origin/master &&
-                git fetch origin master:refs/remotes/origin/master -n --depth=1 &&
+                git fetch origin master:refs/remotes/origin/master -n &&
                 git reset --hard origin/master",
     cwd     => $installdir,
     user    => $::boxen_user,
     creates => "${installdir}/.git",
     require => File[$installdir],
-    timeout => 0
   }
 
   File {
