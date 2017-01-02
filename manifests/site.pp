@@ -73,7 +73,6 @@ node default {
       'git-lfs',
       'gnu-sed',
       'gnu-tar',
-      'httpie',
       'icdiff',
       'imagemagick',
       'moreutils',
