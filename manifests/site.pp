@@ -57,36 +57,10 @@ node default {
   include git
 
   # common, useful brew packages
-  package {
-    [
-      'ack',
-      'autojump',
-      'automake',
-      'bash',
-      'bash-completion2',
-      'cmake',
-      'ctags',
-      'dos2unix',
-      'findutils',
-      'fzf',
-      'git-flow',
-      'git-lfs',
-      'gnu-sed',
-      'gnu-tar',
-      'icdiff',
-      'imagemagick',
-      'moreutils',
-      'node',
-      'openssl',
-      'privoxy',
-      'ssh-copy-id',
-      'the_silver_searcher',
-      'tmux',
-      'tree',
-      'vim',
-      'wget'
-    ]:
-  }
+  # package {
+  #   [
+  #   ]:
+  # }
 
   file { "${boxen::config::srcdir}/our-boxen":
     ensure => link,
@@ -151,29 +125,5 @@ node default {
 
   include iterm2::stable
   include iterm2::colors::solarized_dark
-
-  package { 'appcleaner': provider => 'brewcask' }
-  package { 'appdelete': provider => 'brewcask' }
-  package { 'atom': provider => 'brewcask' }
-  package { 'ccleaner': provider => 'brewcask' }
-  package { 'dropbox': provider => 'brewcask' }
-  package { 'duet': provider => 'brewcask' }
-  package { 'evernote': provider => 'brewcask' }
-  package { 'firefox': provider => 'brewcask' }
-  package { 'flux': provider => 'brewcask' }
-  package { 'google-chrome': provider => 'brewcask' }
-  package { 'google-drive': provider => 'brewcask' }
-  package { 'macdown': provider => 'brewcask' }
-  package { 'malwarebytes-anti-malware': provider => 'brewcask' }
-  package { 'mysqlworkbench': provider => 'brewcask' }
-  package { 'near-lock': provider => 'brewcask' }
-  package { 'opera': provider => 'brewcask' }
-  package { 'p4merge': provider => 'brewcask' }
-  package { 'pgadmin4': provider => 'brewcask' }
-  package { 'scroll-reverser': provider => 'brewcask' }
-  package { 'slack': provider => 'brewcask' }
-  package { 'sourcetree': provider => 'brewcask' }
-  package { 'telegram-desktop': provider => 'brewcask' }
-  package { 'vmware-horizon-client': provider => 'brewcask' }
 
 }
