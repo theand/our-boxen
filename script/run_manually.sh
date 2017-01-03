@@ -117,3 +117,7 @@ brew install gradle
 brew config
 pip install --upgrade pip setuptools
 /usr/local/opt/fzf/install
+
+source ~/mathiasdotfiles/brew.sh
+source ~/mathiasdotfiles/bootstrap.sh
+source ~/mathiasdotfiles/.macos
