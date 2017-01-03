@@ -121,3 +121,6 @@ pip install --upgrade pip setuptools
 source ~/mathiasdotfiles/brew.sh
 source ~/mathiasdotfiles/bootstrap.sh
 source ~/mathiasdotfiles/.macos
+
+brew list
+brew cask list
