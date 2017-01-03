@@ -7,17 +7,21 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until this script has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-brew update;
-brew upgrade;
+###### Brew update&upgrade
+mv /usr/local/Homebrew /usr/local/_BACKUP_Homebrew
+brew update --force
+brew upgrade
+brew doctor
 
-###### Brew
+
+###### Brew Packages
 
 BREW_PACKAGES=(
 ack
 autojump
 automake
 bash
-bash-completion2
+homebrew/versions/bash-completion2
 cmake
 ctags
 dos2unix
@@ -47,8 +51,8 @@ do
 done
 
 
-
 ####### Cask
+
 CASK_PACKAGES=(
 appcleaner
 appdelete
@@ -75,27 +79,41 @@ telegram-desktop
 vmware-horizon-client
 )
 
-
 for i in ${CASK_PACKAGES[@]};
 do
     brew cask install $i;
 done
 
 
-
 ###### these package needs admin's password during installation.
 
-brew cask install java
+CASK_SUDO_PACKAGES=(
+java
+alfred
+bettertouchtool
+docker
+gureumkim
+macvim
+vagrant
+virtualbox
+xtrafinder
+dash
+)
+
+for i in ${CASK_SUDO_PACKAGES[@]};
+do
+    brew cask install $i;
+done
+
+
+###### java dependency
+
 brew install tomcat
 brew install maven
 brew install gradle
 
-brew cask install alfred
-brew cask install bettertouchtool
-brew cask install docker
-brew cask install gureumkim
-brew cask install macvim
-brew cask install vagrant
-brew cask install virtualbox
-brew cask install xtrafinder
-brew cask install dash
+
+###### After installation script
+brew config
+pip install --upgrade pip setuptools
+/usr/local/opt/fzf/install
