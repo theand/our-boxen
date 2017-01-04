@@ -69,6 +69,7 @@ BREW_PACKAGES=(
   gradle
   icdiff
   imagemagick
+  mackup
   maven
   moreutils
   node
