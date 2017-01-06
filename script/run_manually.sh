@@ -11,13 +11,6 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 
-###### Switch to using brew-installed bash as default shell
-if ! fgrep -q '/usr/local/bin/bash' /etc/shells; then
-  echo '/usr/local/bin/bash' | sudo tee -a /etc/shells;
-  chsh -s /usr/local/bin/bash;
-fi;
-
-
 ###### Brew update&upgrade
 mv /usr/local/Homebrew /usr/local/_BACKUP_Homebrew
 brew update --force
@@ -157,6 +150,14 @@ brew config
 brew list
 brew cask list
 brew cleanup
+
+
+###### Switch to using brew-installed bash as default shell
+if ! fgrep -q '/usr/local/bin/bash' /etc/shells; then
+  echo '/usr/local/bin/bash' | sudo tee -a /etc/shells;
+  chsh -s /usr/local/bin/bash;
+fi;
+
 
 pip install --upgrade pip setuptools
 
