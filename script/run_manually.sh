@@ -44,7 +44,7 @@ done
 
 
 ###### Brew Packages with options
-brew install vim --with-lua --override-system-vi
+brew install vim --with-lua --with-override-system-vi
 brew cask install macvim --with-cscope --with-lua
 brew linkapps macvim
 
