@@ -12,6 +12,6 @@ Gem::Specification.new do |s|
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubyforge_project = "metaclass"
-  s.rubygems_version = "2.0.14"
+  s.rubygems_version = "2.0.14.1"
   s.summary = "Adds a metaclass method to all Ruby objects"
 end

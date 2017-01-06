@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.homepage = "https://github.com/lostisland/sawyer"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = "2.0.14"
+  s.rubygems_version = "2.0.14.1"
   s.summary = "Secret User Agent of HTTP"
 
   if s.respond_to? :specification_version then

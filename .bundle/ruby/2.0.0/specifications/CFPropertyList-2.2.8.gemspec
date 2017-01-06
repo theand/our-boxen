@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.homepage = "http://github.com/ckruse/CFPropertyList"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = "2.0.14"
+  s.rubygems_version = "2.0.14.1"
   s.summary = "Read, write and manipulate both binary and XML property lists as defined by apple"
 
   if s.respond_to? :specification_version then

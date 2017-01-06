@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.homepage = "https://github.com/rodjek/rspec-puppet/"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = "2.0.14"
+  s.rubygems_version = "2.0.14.1"
   s.summary = "RSpec tests for your Puppet manifests"
 
   if s.respond_to? :specification_version then

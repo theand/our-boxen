@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.rdoc_options = ["--title", "Puppet - Configuration Management", "--main", "README.md", "--line-numbers"]
   s.require_paths = ["lib"]
   s.rubyforge_project = "puppet"
-  s.rubygems_version = "2.0.14"
+  s.rubygems_version = "2.0.14.1"
   s.summary = "Puppet, an automated configuration management tool"
 
   if s.respond_to? :specification_version then

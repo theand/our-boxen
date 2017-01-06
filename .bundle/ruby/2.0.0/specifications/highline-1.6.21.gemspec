@@ -16,6 +16,6 @@ Gem::Specification.new do |s|
   s.rdoc_options = ["--title", "HighLine Documentation", "--main", "README"]
   s.require_paths = ["lib"]
   s.rubyforge_project = "highline"
-  s.rubygems_version = "2.0.14"
+  s.rubygems_version = "2.0.14.1"
   s.summary = "HighLine is a high-level command-line IO library."
 end

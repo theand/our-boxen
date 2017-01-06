@@ -13,6 +13,6 @@ Gem::Specification.new do |s|
   s.licenses = ["Ruby"]
   s.require_paths = ["lib"]
   s.rubyforge_project = "codeforpeople"
-  s.rubygems_version = "2.0.14"
+  s.rubygems_version = "2.0.14.1"
   s.summary = "open4"
 end
