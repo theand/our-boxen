@@ -71,6 +71,7 @@ BREW_PACKAGES=(
   tomcat
   tree
   wget
+  yarn
 )
 
 for i in ${BREW_PACKAGES[@]};
@@ -106,7 +107,6 @@ CASK_PACKAGES=(
   switchresx
   telegram-desktop
   vmware-horizon-client
-  yarn
 )
 
 for i in ${CASK_PACKAGES[@]};
@@ -161,5 +161,7 @@ pip install --upgrade pip setuptools
 source ~/mathiasdotfiles/bootstrap.sh
 
 /usr/local/opt/fzf/install
+
+curl https://github.com/theand/spf13-vim/raw/theand/bootstrap.sh -L | bash -s
 
 source ~/mathiasdotfiles/.macos
