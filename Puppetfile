@@ -29,7 +29,7 @@ end
 # Includes many of our custom types and providers, as well as global
 # config. Required.
 
-github "boxen", "3.11.3.theand", :repo => "theand-boxen/puppet-boxen"
+github "boxen", "3.12.0.theand", :repo => "theand-boxen/puppet-boxen"
 
 # Support for default hiera data in modules
 
@@ -38,8 +38,9 @@ github "module_data", "0.0.4", :repo => "ripienaar/puppet-module-data"
 # Core modules for a basic development environment. You can replace
 # some/most of these if you want, but it's not recommended.
 
-github "brewcask",    "0.0.7.1.theand", :repo => "theand-boxen/puppet-brewcask"
-github "git",         "2.11.0"
+
+github "brewcask",    "0.0.10", :repo => "theand-boxen/puppet-brewcask"
+github "git",         "2.13.0"
 github "homebrew",    "2.1.0.2.theand", :repo => "theand-boxen/puppet-homebrew"
 github "inifile",     "1.6.0", :repo => "puppetlabs/puppetlabs-inifile"
 github "pkgconfig",   "1.0.0"
