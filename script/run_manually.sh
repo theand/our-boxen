@@ -14,6 +14,8 @@ brew update --force
 brew upgrade
 brew tap homebrew/versions
 brew tap caskroom/fonts
+brew tap caskroom/versions
+brew tap caskroom/drivers
 
 ###### these package needs admin's password during installation.
 CASK_SUDO_PACKAGES=(
