@@ -29,11 +29,6 @@ GITHUBTARBALL
     sudo (1.0.0)
 
 GITHUBTARBALL
-  remote: mloberg/puppet-python
-  specs:
-    python (3.1.0)
-
-GITHUBTARBALL
   remote: puppetlabs/puppetlabs-inifile
   specs:
     inifile (1.6.0)
@@ -74,6 +69,11 @@ GITHUBTARBALL
     mathiasdotfiles (0.0.2.theand)
 
 GITHUBTARBALL
+  remote: theand-boxen/puppet-python
+  specs:
+    python (3.1.0.theand)
+
+GITHUBTARBALL
   remote: theand-boxen/puppet-ruby
   specs:
     ruby (8.5.7.1.theand)
@@ -99,7 +99,7 @@ DEPENDENCIES
   module_data (= 0.0.4)
   osx (= 2.8.0)
   pkgconfig (= 1.0.0)
-  python (= 3.1.0)
+  python (= 3.1.0.theand)
   repository (= 2.4.1)
   ruby (= 8.5.7.1.theand)
   spf13vim3 (= 1.0.2.theand)
