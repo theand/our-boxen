@@ -10,7 +10,6 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 ###### Brew update&upgrade
-[ ! -d /usr/local/_BACKUP_Homebrew ] &&  mv /usr/local/Homebrew /usr/local/_BACKUP_Homebrew
 brew update --force
 brew upgrade
 brew tap homebrew/versions
