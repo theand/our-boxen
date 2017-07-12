@@ -53,7 +53,7 @@ github "xquartz",    "1.2.1.theand", :repo => "theand-boxen/puppet-xquartz"
 # https://github.com/boxen.
 
 # custom Dev Tools by theand
-github "python",  "3.1.0", :repo => "mloberg/puppet-python"
+github "python",  "3.1.0.theand", :repo => "theand-boxen/puppet-python"
 github "ruby",        "8.5.7.1.theand", :repo => "theand-boxen/puppet-ruby"
 github "spf13vim3",  "1.0.2.theand", :repo => "theand-boxen/puppet-spf13vim3"
 
