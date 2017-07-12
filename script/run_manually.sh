@@ -24,7 +24,7 @@ CASK_SUDO_PACKAGES=(
   gureumkim
   vagrant
   virtualbox
-  dash
+  dash3
 )
 
 for i in ${CASK_SUDO_PACKAGES[@]};
