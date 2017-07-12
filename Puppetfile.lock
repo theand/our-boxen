@@ -1,7 +1,7 @@
 GITHUBTARBALL
   remote: boxen/puppet-git
   specs:
-    git (2.11.0)
+    git (2.13.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-osx
@@ -12,11 +12,6 @@ GITHUBTARBALL
   remote: boxen/puppet-pkgconfig
   specs:
     pkgconfig (1.0.0)
-
-GITHUBTARBALL
-  remote: boxen/puppet-python
-  specs:
-    python (2.0.1)
 
 GITHUBTARBALL
   remote: boxen/puppet-repository
@@ -34,9 +29,9 @@ GITHUBTARBALL
     sudo (1.0.0)
 
 GITHUBTARBALL
-  remote: boxen/puppet-xquartz
+  remote: mloberg/puppet-python
   specs:
-    xquartz (1.2.1)
+    python (3.1.0)
 
 GITHUBTARBALL
   remote: puppetlabs/puppetlabs-inifile
@@ -46,7 +41,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: puppetlabs/puppetlabs-stdlib
   specs:
-    stdlib (4.14.0)
+    stdlib (4.17.1)
 
 GITHUBTARBALL
   remote: ripienaar/puppet-module-data
@@ -56,17 +51,17 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: theand-boxen/puppet-boxen
   specs:
-    boxen (3.11.2.theand)
+    boxen (3.12.0.theand)
 
 GITHUBTARBALL
   remote: theand-boxen/puppet-brewcask
   specs:
-    brewcask (0.0.7.1.theand)
+    brewcask (0.0.10.theand)
 
 GITHUBTARBALL
   remote: theand-boxen/puppet-homebrew
   specs:
-    homebrew (2.1.0.2.theand)
+    homebrew (2.1.0.4.theand)
 
 GITHUBTARBALL
   remote: theand-boxen/puppet-iterm2
@@ -81,7 +76,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: theand-boxen/puppet-ruby
   specs:
-    ruby (8.5.6.theand)
+    ruby (8.5.7.1.theand)
 
 GITHUBTARBALL
   remote: theand-boxen/puppet-spf13vim3
@@ -89,22 +84,21 @@ GITHUBTARBALL
     spf13vim3 (1.0.2.theand)
 
 DEPENDENCIES
-  boxen (= 3.11.2.theand)
-  brewcask (= 0.0.7.1.theand)
-  git (= 2.11.0)
-  homebrew (= 2.1.0.2.theand)
+  boxen (= 3.12.0.theand)
+  brewcask (= 0.0.10.theand)
+  git (= 2.13.0)
+  homebrew (= 2.1.0.4.theand)
   inifile (= 1.6.0)
   iterm2 (= 1.2.5.2.theand)
   mathiasdotfiles (= 0.0.2.theand)
   module_data (= 0.0.4)
   osx (= 2.8.0)
   pkgconfig (= 1.0.0)
-  python (= 2.0.1)
+  python (= 3.1.0)
   repository (= 2.4.1)
-  ruby (= 8.5.6.theand)
+  ruby (= 8.5.7.1.theand)
   spf13vim3 (= 1.0.2.theand)
-  stdlib (= 4.14.0)
+  stdlib (= 4.17.1)
   sublime_text (= 1.1.1)
   sudo (= 1.0.0)
-  xquartz (= 1.2.1)
 

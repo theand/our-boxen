@@ -39,22 +39,21 @@ github "module_data", "0.0.4", :repo => "ripienaar/puppet-module-data"
 # some/most of these if you want, but it's not recommended.
 
 
-github "brewcask",    "0.0.10", :repo => "theand-boxen/puppet-brewcask"
+github "brewcask",    "0.0.10.theand", :repo => "theand-boxen/puppet-brewcask"
 github "git",         "2.13.0"
-github "homebrew",    "2.1.0.2.theand", :repo => "theand-boxen/puppet-homebrew"
+github "homebrew",    "2.1.0.4.theand", :repo => "theand-boxen/puppet-homebrew"
 github "inifile",     "1.6.0", :repo => "puppetlabs/puppetlabs-inifile"
 github "pkgconfig",   "1.0.0"
 github "repository",  "2.4.1"
-github "stdlib",      "4.14.0", :repo => "puppetlabs/puppetlabs-stdlib"
+github "stdlib",      "4.17.1", :repo => "puppetlabs/puppetlabs-stdlib"
 github "sudo",        "1.0.0"
-github "xquartz",     "1.2.1"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
 
 # custom Dev Tools by theand
-github "python",  "2.0.1"
-github "ruby",        "8.5.6.theand", :repo => "theand-boxen/puppet-ruby"
+github "python",  "3.1.0", :repo => "mloberg/puppet-python"
+github "ruby",        "8.5.7.1.theand", :repo => "theand-boxen/puppet-ruby"
 github "spf13vim3",  "1.0.2.theand", :repo => "theand-boxen/puppet-spf13vim3"
 
 
