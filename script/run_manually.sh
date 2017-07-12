@@ -43,10 +43,12 @@ brew linkapps macvim
 ###### Brew Packages
 BREW_PACKAGES=(
   ack
+  autoconf
   autojump
   automake
   bash
-  homebrew/versions/bash-completion2
+  bash-completion2
+  ccat
   cmake
   coreutils
   ctags
@@ -58,6 +60,7 @@ BREW_PACKAGES=(
   gnu-sed
   gnu-tar
   gradle
+  grep
   icdiff
   imagemagick
   mackup
@@ -66,6 +69,7 @@ BREW_PACKAGES=(
   node
   openssl
   privoxy
+  recode
   ssh-copy-id
   the_silver_searcher
   tmux
@@ -95,7 +99,7 @@ CASK_PACKAGES=(
   google-chrome
   google-drive
   hyper
-  macdown
+  jetbrains-toolbox
   malwarebytes-anti-malware
   mysqlworkbench
   opera
