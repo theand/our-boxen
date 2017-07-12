@@ -164,8 +164,8 @@ fi;
 
 pip install --upgrade pip setuptools
 
-source ~/mathiasdotfiles/bootstrap.sh
+/usr/local/bin/bash ~/mathiasdotfiles/bootstrap.sh
 
 #curl https://github.com/theand/spf13-vim/raw/theand/bootstrap.sh -L | bash -s
 
-source ~/mathiasdotfiles/.macos
+/usr/local/bin/bash ~/mathiasdotfiles/.macos
