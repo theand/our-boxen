@@ -47,6 +47,7 @@ github "pkgconfig",   "1.0.0"
 github "repository",  "2.4.1"
 github "stdlib",      "4.17.1", :repo => "puppetlabs/puppetlabs-stdlib"
 github "sudo",        "1.0.0"
+github "xquartz",    "1.2.1.theand", :repo => "theand-boxen/puppet-xquartz"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
