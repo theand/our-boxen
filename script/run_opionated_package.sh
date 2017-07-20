@@ -21,6 +21,7 @@ brew tap caskroom/drivers
 CASK_SUDO_PACKAGES=(
   duet
   logitech-unifying
+  xbox360-controller-driver
 )
 
 for i in ${CASK_SUDO_PACKAGES[@]};
