@@ -20,6 +20,7 @@ brew tap caskroom/drivers
 ###### these package needs admin's password during installation.
 CASK_SUDO_PACKAGES=(
   duet
+  logitech-unifying
 )
 
 for i in ${CASK_SUDO_PACKAGES[@]};
@@ -60,23 +61,19 @@ done
 CASK_PACKAGES=(
   beyond-compare
   day-o
-  edgeview
-  google-photos-backup
+  google-photos-backup-and-sync
   handbrake
   haroopad
   libreoffice
-  logitech-unifying
   macdown
   marp
   mojibar
   ngrok
-  picasa
   ransomwhere
   rescuetime
   scroll-reverser
   steam
   timings
-  vagrant-bar
   vagrant-manager
   vmware-fusion
   wordpresscom

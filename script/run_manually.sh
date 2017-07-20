@@ -12,7 +12,6 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 ###### Brew update&upgrade
 brew update --force
 brew upgrade
-brew tap homebrew/versions
 brew tap caskroom/fonts
 brew tap caskroom/versions
 brew tap caskroom/drivers
@@ -37,8 +36,7 @@ done
 
 ###### Brew Packages with options
 brew install vim --with-lua --with-override-system-vi --force
-brew cask install macvim --with-cscope --with-lua
-brew linkapps macvim
+brew cask install macvim --with-lua
 
 
 ###### Brew Packages
@@ -160,6 +158,7 @@ brew cleanup
 ###### Switch to using brew-installed bash as default shell
 if ! fgrep -q '/usr/local/bin/bash' /etc/shells; then
   echo '/usr/local/bin/bash' | sudo tee -a /etc/shells;
+  chsh -s /usr/local/bin/bash;
   sudo chsh -s /usr/local/bin/bash;
 fi;
 
