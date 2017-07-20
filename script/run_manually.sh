@@ -22,11 +22,11 @@ CASK_SUDO_PACKAGES=(
   java
   alfred
   bettertouchtool
+  dash3
   docker
   gureumkim
   vagrant
   virtualbox
-  dash3
 )
 
 for i in ${CASK_SUDO_PACKAGES[@]};
@@ -76,6 +76,7 @@ BREW_PACKAGES=(
   tmux
   tomcat
   tree
+  w3m
   wget
   yarn
 )
@@ -112,6 +113,7 @@ CASK_PACKAGES=(
   sourcetree
   switchresx
   telegram-desktop
+  visual-studio-code
   vmware-horizon-client
 )
 
