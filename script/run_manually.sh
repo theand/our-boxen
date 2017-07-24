@@ -89,7 +89,6 @@ done
 
 CASK_PACKAGES=(
   appcleaner
-  appdelete
   atom
   ccleaner
   dropbox
@@ -97,7 +96,7 @@ CASK_PACKAGES=(
   firefox
   flux
   google-chrome
-  google-drive
+  google-backup-and-sync
   hyper
   jetbrains-toolbox
   malwarebytes-anti-malware
@@ -105,7 +104,6 @@ CASK_PACKAGES=(
   opera
   p4merge
   pgadmin4
-  rescuetime
   scroll-reverser
   slack
   sourcetree

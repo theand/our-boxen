@@ -60,9 +60,10 @@ done
 ####### Cask
 
 CASK_PACKAGES=(
+  backblaze
   beyond-compare
   day-o
-  google-photos-backup-and-sync
+  devonthink
   handbrake
   haroopad
   libreoffice
@@ -72,7 +73,6 @@ CASK_PACKAGES=(
   ngrok
   ransomwhere
   rescuetime
-  scroll-reverser
   steam
   timings
   vagrant-manager
